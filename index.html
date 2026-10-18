@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VinX Labs — Logiciels de bureau locaux</title>
-  <meta name="description" content="VinX Labs conçoit des applications de bureau locales : vos données restent sur votre machine, sans compte ni abonnement." />
+  <title>VinX Labs — Logiciels de bureau</title>
+  <meta name="description" content="VinX Labs développe des logiciels de bureau hors-ligne, sans compte ni abonnement." />
   <link rel="alternate" hreflang="en" href="en/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,12 +13,12 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
-  <header class="site-header">
+  <header>
     <nav class="nav container">
-      <a href="./" class="brand"><img src="assets/vinx-logo.svg" alt="" width="34" height="24" /><span>VinX <b>Labs</b></span></a>
+      <a href="./" class="brand"><img src="assets/vinx-logo.svg" alt="" width="32" height="23" /><span>VinX Labs</span></a>
       <ul class="nav-links">
-        <li class="hide-sm"><a href="#products">Produits</a></li>
-        <li class="hide-sm"><a href="https://github.com/HaitoDann">GitHub</a></li>
+        <li><a href="nilo/">Nilo</a></li>
+        <li><a href="./#about">Contact</a></li>
         <li><a href="en/" class="lang" hreflang="en">EN</a></li>
       </ul>
     </nav>
@@ -27,31 +27,40 @@
   <main>
     <section class="hero">
       <div class="container">
-        <img src="assets/vinx-logo.svg" alt="VinX Labs" class="hero-logo" width="96" height="69" />
-        <h1>Des logiciels simples,<br />qui vous appartiennent.</h1>
-        <p>VinX Labs conçoit des applications de bureau locales : vos données restent sur votre machine, sans compte ni abonnement.</p>
+        <h1>Des logiciels de bureau, sans compte ni abonnement.</h1>
+        <p class="hero-lead">VinX Labs développe des applications qui s’installent sur votre ordinateur et fonctionnent hors-ligne. Vos fichiers restent chez vous.</p>
+        <div class="hero-actions">
+          <a href="nilo/" class="btn btn-accent">Découvrir Nilo</a>
+          <a href="https://github.com/HaitoDann/Nilo-releases/releases/latest" class="btn btn-line">Télécharger</a>
+        </div>
+        <figure class="shot">
+          <img src="nilo/assets/screenshot-kanban.png" alt="Nilo, vue Kanban" width="1600" height="900" />
+        </figure>
       </div>
     </section>
 
     <section class="section" id="products">
       <div class="container">
-        <h2 class="section-title">Nos logiciels</h2>
-        <div class="product-grid">
-          <a href="nilo/" class="product-card">
-            <div class="product-head">
-              <span class="product-icon"><img src="nilo/assets/favicon.png" alt="" width="30" height="30" /></span>
-              <div><h3>Nilo</h3><span class="product-tag">Gestion de projets · Windows</span></div>
-            </div>
-            <p>Kanban, Gantt, liste et calendrier, 100 % hors-ligne. Gratuit pour les particuliers, licence à 49 € pour les entreprises.</p>
-            <span class="product-link">Découvrir Nilo →</span>
-          </a>
-          <div class="product-card soon">
-            <div class="product-head">
-              <span class="product-icon">?</span>
-              <div><h3>Bientôt</h3><span class="product-tag">En développement</span></div>
-            </div>
-            <p>Un outil de préparation et de suivi des cours pour les professeurs des écoles.</p>
+        <h2>Logiciels</h2>
+        <div class="product">
+          <span class="product-icon"><img src="nilo/assets/favicon.png" alt="" width="40" height="40" /></span>
+          <div>
+            <h3>Nilo</h3>
+            <p>Gestion de projets 100&nbsp;% hors-ligne&nbsp;: Kanban, Gantt, liste et calendrier.</p>
+            <p class="product-meta">Windows 10/11 · Gratuit pour les particuliers</p>
           </div>
+          <a href="nilo/" class="btn btn-line">Voir Nilo</a>
+        </div>
+        <p class="more">D’autres logiciels suivront.</p>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about">
+        <h2>À propos</h2>
+        <div>
+          <p>VinX Labs est un studio indépendant basé en France. Chaque logiciel est conçu pour faire une chose correctement, sans collecte de données ni dépendance à un service en ligne.</p>
+          <p>Une question, une demande de devis ou un problème de licence&nbsp;: <a href="mailto:contact@vinx-labs.fr">contact@vinx-labs.fr</a></p>
         </div>
       </div>
     </section>
@@ -61,6 +70,7 @@
     <div class="container footer-inner">
       <p>© <span id="year">2026</span> VinX Labs</p>
       <div class="footer-links">
+        <a href="mailto:contact@vinx-labs.fr">contact@vinx-labs.fr</a>
         <a href="mentions-legales.html">Mentions légales &amp; CGV</a>
         <a href="https://github.com/HaitoDann">GitHub</a>
       </div>
