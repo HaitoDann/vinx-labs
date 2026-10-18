@@ -14,7 +14,7 @@ nilo/                  → style.css, script.js, assets (thème Nilo, bleu)
 
 - Lien Lemon Squeezy : chercher `VOTRE-BOUTIQUE.lemonsqueezy.com` dans `nilo/index.html` et `en/nilo/index.html`.
 - Mentions légales : remplacer les champs surlignés en jaune dans `mentions-legales.html` et `en/legal.html`.
-- Domaine : créer un fichier `CNAME` contenant le domaine (ex. `vinx-labs.fr`), puis configurer le DNS
+- Domaine : créer un fichier `CNAME` contenant le domaine (`vinxlabs.fr`), puis configurer le DNS
   (Settings → Pages → Custom domain).
 
 ## Mise en ligne
