@@ -17,6 +17,10 @@ nilo/                  → style.css, script.js, assets (thème Nilo, bleu)
 - Domaine : créer un fichier `CNAME` contenant le domaine (ex. `vinx-labs.fr`), puis configurer le DNS
   (Settings → Pages → Custom domain).
 
+## Mise en ligne
+
+GitHub Pages en mode « Deploy from a branch » (Settings → Pages), dossier `/ (root)`.
+
 ## Prévisualiser
 
 ```bash
