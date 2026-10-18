@@ -19,7 +19,7 @@ nilo/                  → style.css, script.js, assets (thème Nilo, bleu)
 
 ## Mise en ligne
 
-GitHub Pages en mode « Deploy from a branch » (Settings → Pages), dossier `/ (root)`.
+GitHub Pages en mode « Deploy from a branch » : branche `main`, dossier `/ (root)`. Domaine : `vinxlabs.fr` (fichier `CNAME`).
 
 ## Prévisualiser
 

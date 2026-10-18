@@ -44,7 +44,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .btn-line:hover { border-color: var(--text-faint); }
 
 /* ===== Hero ===== */
-.hero { padding: 72px 0 64px; }
+.hero { padding: 64px 0 52px; }
+#products { border-top: 0; padding-top: 0; }
+.link { color: var(--accent); }
+.link:hover { text-decoration: underline; }
 .hero h1 { font-size: clamp(2.2rem, 4.6vw, 3.5rem); max-width: 17ch; }
 .hero-lead { color: var(--text-soft); font-size: 1.15rem; max-width: 52ch; margin-top: 22px; }
 
