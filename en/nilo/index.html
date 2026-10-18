@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nilo — Local project management</title>
+  <meta name="description" content="Nilo: 100% local desktop project management. Kanban, Gantt, calendar. No account, no cloud. Windows." />
+  <meta name="color-scheme" content="light" />
+  <link rel="alternate" hreflang="fr" href="../../nilo/" />
+  <meta property="og:title" content="Nilo — Local project management" />
+  <meta property="og:description" content="Kanban, Gantt, calendar. Your data stays with you, on your machine." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../nilo/style.css?v=14" />
+  <link rel="icon" href="../../nilo/assets/favicon.png" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="brand">
+        <span class="brand-chip"><img src="../../nilo/assets/favicon.png" alt="" width="22" height="22" /></span>
+        <span class="brand-name">Nilo</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="../../nilo/" class="nav-lang" hreflang="fr">FR</a></li>
+        <li>
+          <a href="https://github.com/HaitoDann/Nilo-releases" class="nav-github" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/HaitoDann/Nilo-releases/releases/latest" class="btn btn-nav" data-dl="page">Download</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <a href="../" class="hero-by">by VinX Labs</a>
+          <span class="hero-eyebrow">Windows · Free for personal use · Beta</span>
+          <h1>Nilo</h1>
+          <p class="hero-lead">Project management that stays on your machine. Kanban, Gantt, calendar — no account, no cloud, no subscription.</p>
+          <div class="hero-actions">
+            <a href="https://github.com/HaitoDann/Nilo-releases/releases/latest" class="btn btn-white btn-lg" data-dl="setup">
+              Download
+            </a>
+            <a href="https://github.com/HaitoDann/Nilo-releases/releases/latest" class="btn btn-outline-white btn-lg" data-dl="portable">
+              Portable version
+            </a>
+          </div>
+          <p class="hero-version-note" data-dl-version>Loading version…</p>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="screenshot-carousel">
+            <div class="screenshot-tabs" role="tablist" aria-label="View">
+              <button class="stab active" data-view="0" role="tab" aria-selected="true">Kanban</button>
+              <button class="stab" data-view="1" role="tab" aria-selected="false">Gantt</button>
+              <button class="stab" data-view="2" role="tab" aria-selected="false">List</button>
+            </div>
+            <div class="screenshot-frame">
+              <img src="../../nilo/assets/screenshot-kanban.png" alt="Nilo — Kanban view" class="screenshot-img active" data-idx="0" />
+              <img src="../../nilo/assets/screenshot-gantt.png"  alt="Nilo — Gantt view"  class="screenshot-img"        data-idx="1" />
+              <img src="../../nilo/assets/screenshot-liste.png"  alt="Nilo — List view"  class="screenshot-img"        data-idx="2" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <g>
+            <path d="M0,60.0 L20,54.3 L40,49.0 L60,44.4 L80,40.9 L100,38.7 L120,38.0 L140,38.7 L160,40.9 L180,44.4 L200,49.0 L220,54.3 L240,60.0 L260,65.7 L280,71.0 L300,75.6 L320,79.1 L340,81.3 L360,82.0 L380,81.3 L400,79.1 L420,75.6 L440,71.0 L460,65.7 L480,60.0 L500,54.3 L520,49.0 L540,44.4 L560,40.9 L580,38.7 L600,38.0 L620,38.7 L640,40.9 L660,44.4 L680,49.0 L700,54.3 L720,60.0 L740,65.7 L760,71.0 L780,75.6 L800,79.1 L820,81.3 L840,82.0 L860,81.3 L880,79.1 L900,75.6 L920,71.0 L940,65.7 L960,60.0 L980,54.3 L1000,49.0 L1020,44.4 L1040,40.9 L1060,38.7 L1080,38.0 L1100,38.7 L1120,40.9 L1140,44.4 L1160,49.0 L1180,54.3 L1200,60.0 L1220,65.7 L1240,71.0 L1260,75.6 L1280,79.1 L1300,81.3 L1320,82.0 L1340,81.3 L1360,79.1 L1380,75.6 L1400,71.0 L1420,65.7 L1440,60.0 L1460,54.3 L1480,49.0 L1500,44.4 L1520,40.9 L1540,38.7 L1560,38.0 L1580,38.7 L1600,40.9 L1620,44.4 L1640,49.0 L1660,54.3 L1680,60.0 L1700,65.7 L1720,71.0 L1740,75.6 L1760,79.1 L1780,81.3 L1800,82.0 L1820,81.3 L1840,79.1 L1860,75.6 L1880,71.0 L1900,65.7 L1920,60.0 L1940,54.3 L1960,49.0 L1980,44.4 L2000,40.9 L2020,38.7 L2040,38.0 L2060,38.7 L2080,40.9 L2100,44.4 L2120,49.0 L2140,54.3 L2160,60.0 L2180,65.7 L2200,71.0 L2220,75.6 L2240,79.1 L2260,81.3 L2280,82.0 L2300,81.3 L2320,79.1 L2340,75.6 L2360,71.0 L2380,65.7 L2400,60.0 L2420,54.3 L2440,49.0 L2460,44.4 L2480,40.9 L2500,38.7 L2520,38.0 L2540,38.7 L2560,40.9 L2580,44.4 L2600,49.0 L2620,54.3 L2640,60.0 L2660,65.7 L2680,71.0 L2700,75.6 L2720,79.1 L2740,81.3 L2760,82.0 L2780,81.3 L2800,79.1 L2820,75.6 L2840,71.0 L2860,65.7 L2880,60.0 L2880,120 L0,120 Z"/>
+            <animateTransform id="waveAnim" attributeName="transform" type="translate" from="0 0" to="-1440 0" dur="22s" repeatCount="indefinite" />
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== Features ===== -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Everything you need, locally</h2>
+        </div>
+        <div class="feature-grid" data-stagger>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="5" height="16" rx="1"/><rect x="10" y="4" width="5" height="11" rx="1"/><rect x="17" y="4" width="4" height="14" rx="1"/></svg>
+            </div>
+            <h3>Kanban</h3>
+            <p>Custom columns, drag and drop, priorities and assignees visible on every card — without opening the task.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </div>
+            <h3>List view</h3>
+            <p>All project tasks on a single page, filterable and sortable by status, priority or due date.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="5" x2="15" y2="5"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="19" x2="11" y2="19"/></svg>
+            </div>
+            <h3>Gantt</h3>
+            <p>See how long your tasks last and how they overlap. Drag bars to reschedule, create groups and milestones.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            </div>
+            <h3>Local storage</h3>
+            <p>Your data lives in a <code>nilo.db</code> file on your disk. Back it up, move it, put it on your NAS — it belongs to you.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+            </div>
+            <h3>Calendar</h3>
+            <p>Tasks and events on a monthly calendar. Drag a deadline to another day to reschedule it instantly.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 20 6"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>
+            </div>
+            <h3>Subtasks</h3>
+            <p>Split each task into steps and tick them off as you go. A progress ring shows right on the Kanban card.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section section-alt" id="about">
+      <div class="container about-inner">
+        <div class="about-text reveal">
+          <span class="eyebrow">The idea</span>
+          <h2>Your data stays with you</h2>
+          <p>Pick a folder: Nilo creates a SQLite database (<code>nilo.db</code>) in it. Nothing goes online. Copy it to a USB stick, put it on a NAS, or just keep it on your desktop.</p>
+          <ul class="check-list" data-stagger>
+            <li>No account, no cloud</li>
+            <li>Works offline, anywhere</li>
+            <li>Automatic backup on every launch</li>
+            <li>Installer or portable version</li>
+          </ul>
+          <a href="https://github.com/HaitoDann/Nilo-releases/releases/latest" class="btn btn-ghost">All releases</a>
+        </div>
+        <div class="about-visual reveal" aria-hidden="true">
+          <div class="glass-card">
+            <div class="gc-row"><span class="gc-icon">✓</span> Your data on your disk</div>
+            <div class="gc-row"><span class="gc-icon">✓</span> Offline, no tracking</div>
+            <div class="gc-row"><span class="gc-icon">✓</span> Installer &amp; portable</div>
+            <div class="gc-row"><span class="gc-icon">✓</span> Automatic backup</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Tarifs ===== -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pricing</span>
+          <h2>Free for you, simple for businesses</h2>
+        </div>
+        <div class="pricing-grid" data-stagger>
+          <article class="price-card">
+            <h3>Personal</h3>
+            <p class="price">€0</p>
+            <p class="price-note">Personal, non-commercial use</p>
+            <ul class="check-list">
+              <li>All features</li>
+              <li>Free updates</li>
+              <li>No account required</li>
+            </ul>
+            <a href="#download" class="btn btn-ghost">Download</a>
+          </article>
+          <article class="price-card featured">
+            <h3>Business</h3>
+            <p class="price">€49 <span>incl. VAT</span></p>
+            <p class="price-note">Perpetual licence · one-time payment</p>
+            <ul class="check-list">
+              <li>Commercial use allowed</li>
+              <li>Licence key sent by e-mail</li>
+              <li>Invoice provided</li>
+            </ul>
+            <!-- TODO: replace with the Lemon Squeezy checkout link -->
+            <a href="https://VOTRE-BOUTIQUE.lemonsqueezy.com/buy/NILO" class="btn btn-primary">Buy a licence</a>
+          </article>
+        </div>
+        <p class="pricing-sub">Secure payment via Lemon Squeezy. See the <a href="../legal.html">terms of sale</a>.</p>
+      </div>
+    </section>
+
+    <!-- ===== Download CTA ===== -->
+    <section class="section download" id="download">
+      <div class="container">
+        <div class="download-card reveal">
+          <h2>Download Nilo</h2>
+          <p data-dl-version>Windows 10/11 · 64-bit</p>
+          <div class="download-buttons">
+            <a href="https://github.com/HaitoDann/Nilo-releases/releases/latest" class="btn btn-white btn-lg" data-dl="setup">Installer (.exe)</a>
+            <a href="https://github.com/HaitoDann/Nilo-releases/releases/latest" class="btn btn-outline-white btn-lg" data-dl="portable">Portable</a>
+          </div>
+          <p class="download-sub">The <code>.exe</code> files are not signed yet — Windows may show a warning. Click “More info” → “Run anyway”.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section-alt" id="faq">
+      <div class="container faq-inner">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div data-stagger>
+          <details class="faq-item">
+            <summary>Where is my data stored?</summary>
+            <p>On your machine, in the folder of your choice. Nilo creates a <code>nilo.db</code> file (SQLite) there. Nothing is ever sent online.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need a licence?</summary>
+            <p>Only for professional use (company, association, public body). For personal use, Nilo is completely free.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need an account?</summary>
+            <p>No. No account, no sign-in. Nilo works entirely offline.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which systems are supported?</summary>
+            <p>Windows 10/11 (64-bit), as an installer or portable version. macOS and Linux are planned for a future release.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Windows shows a warning on launch?</summary>
+            <p>The <code>.exe</code> files are not digitally signed yet. Click “More info” then “Run anyway”.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I migrate from Notion, Trello or Jira?</summary>
+            <p>Yes. Nilo imports CSV exports (Notion, Asana, Jira, ClickUp, Monday, Excel…) and Trello JSON exports, right from Settings.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-chip"><img src="../../nilo/assets/favicon.png" alt="" width="20" height="20" /></span>
+        <span class="brand-name">Nilo</span>
+      </div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/HaitoDann/Nilo-releases/releases/latest">Download</a>
+        <a href="https://github.com/HaitoDann/Nilo-releases">GitHub</a>
+        <a href="../legal.html">Legal notice</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© <span id="year"></span> <a href="../" class="footer-vinx">VinX Labs</a> — your data, at home, always.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="../../nilo/script.js?v=14"></script>
+</body>
+</html>

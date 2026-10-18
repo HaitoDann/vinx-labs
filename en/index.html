@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VinX Labs — Local desktop software</title>
+  <meta name="description" content="VinX Labs builds local desktop apps: your data stays on your machine, with no account and no subscription." />
+  <link rel="alternate" hreflang="fr" href="../" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/vinx.css" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../en/" class="brand"><img src="../assets/vinx-logo.svg" alt="" width="34" height="24" /><span>VinX <b>Labs</b></span></a>
+      <ul class="nav-links">
+        <li class="hide-sm"><a href="#products">Products</a></li>
+        <li class="hide-sm"><a href="https://github.com/HaitoDann">GitHub</a></li>
+        <li><a href="../" class="lang" hreflang="fr">FR</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="../assets/vinx-logo.svg" alt="VinX Labs" class="hero-logo" width="96" height="69" />
+        <h1>Simple software<br />that belongs to you.</h1>
+        <p>VinX Labs builds local desktop apps: your data stays on your machine, with no account and no subscription.</p>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="container">
+        <h2 class="section-title">Our software</h2>
+        <div class="product-grid">
+          <a href="nilo/" class="product-card">
+            <div class="product-head">
+              <span class="product-icon"><img src="../nilo/assets/favicon.png" alt="" width="30" height="30" /></span>
+              <div><h3>Nilo</h3><span class="product-tag">Project management · Windows</span></div>
+            </div>
+            <p>Kanban, Gantt, list and calendar views, 100% offline. Free for personal use, €49 licence for businesses.</p>
+            <span class="product-link">Discover Nilo →</span>
+          </a>
+          <div class="product-card soon">
+            <div class="product-head">
+              <span class="product-icon">?</span>
+              <div><h3>Coming soon</h3><span class="product-tag">In development</span></div>
+            </div>
+            <p>A lesson planning and tracking tool for primary school teachers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> VinX Labs</p>
+      <div class="footer-links">
+        <a href="legal.html">Legal notice &amp; terms</a>
+        <a href="https://github.com/HaitoDann">GitHub</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
