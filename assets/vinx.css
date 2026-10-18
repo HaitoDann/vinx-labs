@@ -32,6 +32,8 @@ img { max-width: 100%; display: block; }
 .nav-links { list-style: none; display: flex; align-items: center; gap: 28px; font-size: 15px; }
 .nav-links a { color: var(--text-soft); }
 .nav-links a:hover { color: var(--text); }
+a:focus { outline: none; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 .lang { font-weight: 600; font-size: 13px; letter-spacing: .04em; }
 
 /* ===== Buttons ===== */
@@ -42,7 +44,7 @@ img { max-width: 100%; display: block; }
 .btn-line:hover { border-color: var(--text-faint); }
 
 /* ===== Hero ===== */
-.hero { padding: 88px 0 80px; }
+.hero { padding: 72px 0 64px; }
 .hero h1 { font-size: clamp(2.2rem, 4.6vw, 3.5rem); max-width: 17ch; }
 .hero-lead { color: var(--text-soft); font-size: 1.15rem; max-width: 52ch; margin-top: 22px; }
 
@@ -52,8 +54,7 @@ img { max-width: 100%; display: block; }
 .product { display: grid; grid-template-columns: 2fr 3fr; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color .15s; }
 .product:hover { border-color: var(--text-faint); }
 .product-info { padding: 36px; display: flex; flex-direction: column; align-items: flex-start; }
-.product-icon { width: 56px; height: 56px; border-radius: 13px; background: #fff; display: grid; place-items: center; margin-bottom: 22px; }
-.product-icon img { width: 36px; height: 36px; }
+.product-logo { width: 72px; height: 72px; margin-bottom: 22px; }
 .product h3 { font-size: 1.5rem; }
 .product p { color: var(--text-soft); margin-top: 8px; }
 .product-meta { font-size: 14px; color: var(--text-faint) !important; }
