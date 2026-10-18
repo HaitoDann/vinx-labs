@@ -326,3 +326,9 @@ code {
 .pricing-sub a { color: var(--primary); }
 .footer-vinx { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; }
 .footer-vinx img { width: 20px; height: auto; }
+
+/* ===== Intégration au squelette VinX Labs ===== */
+.site-header { top: 52px; transition: top .25s var(--ease), background .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease); }
+.site-header.scrolled { top: 0; }
+.site-footer { padding-bottom: 0; }
+.footer-inner { padding-bottom: 50px; }

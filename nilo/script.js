@@ -49,7 +49,7 @@
   var toTop  = document.querySelector('.to-top');
   function onScroll() {
     var y = window.scrollY || window.pageYOffset;
-    if (header) header.classList.toggle('scrolled', y > 40);
+    if (header) header.classList.toggle('scrolled', y > 52);
     if (toTop)  toTop.classList.toggle('show', y > 600);
   }
   window.addEventListener('scroll', onScroll, { passive: true });

@@ -19,10 +19,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=14" />
+  <link rel="stylesheet" href="style.css?v=15" />
+  <link rel="stylesheet" href="/assets/shell.css" />
   <link rel="icon" href="assets/favicon.png" />
 </head>
 <body>
+  <div class="vx-bar">
+    <nav class="vx-wrap" aria-label="VinX Labs">
+      <a href="/" class="vx-brand"><img src="/assets/vinx-logo.svg" alt="" width="26" height="19" />VinX Labs</a>
+      <ul class="vx-links">
+        <li><a href="/#products" aria-current="page">Logiciels</a></li>
+        <li class="vx-hide-sm"><a href="/#about">Contact</a></li>
+        <li><a href="/en/nilo/" class="vx-lang" hreflang="en">EN</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <!-- ===== Header ===== -->
   <header class="site-header" id="top">
@@ -39,7 +50,6 @@
         <li><a href="#about">À propos</a></li>
         <li><a href="#pricing">Tarifs</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="../en/nilo/" class="nav-lang" hreflang="en">EN</a></li>
         <li>
           <a href="https://github.com/HaitoDann/Nilo-releases" class="nav-github" aria-label="GitHub">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -57,7 +67,6 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-text reveal">
-          <a href="../" class="hero-by">par VinX Labs</a>
           <span class="hero-eyebrow">Windows · Gratuit pour les particuliers · Bêta</span>
           <h1>Nilo</h1>
           <p class="hero-lead">La gestion de projets qui reste sur votre machine. Kanban, Gantt, calendrier — sans compte, sans cloud, sans abonnement.</p>
@@ -280,18 +289,25 @@
         <a href="#faq">FAQ</a>
         <a href="https://github.com/HaitoDann/Nilo-releases/releases/latest">Télécharger</a>
         <a href="https://github.com/HaitoDann/Nilo-releases">GitHub</a>
-        <a href="../mentions-legales.html">Mentions légales</a>
       </div>
     </div>
-    <div class="footer-bottom container">
-      <p><a href="../" class="footer-vinx"><img src="../assets/vinx-logo.svg" alt="" width="20" height="14" />Nilo, par VinX Labs</a> · © <span id="year"></span> · données chez vous, toujours.</p>
+  </footer>
+  <footer class="vx-footer">
+    <div class="vx-wrap">
+      <a href="/" class="vx-brand"><img src="/assets/vinx-logo.svg" alt="" width="20" height="14" /><span>© <span class="vx-year">2026</span> VinX Labs</span></a>
+      <div class="vx-footer-links">
+        <a href="mailto:contact@vinxlabs.fr">contact@vinxlabs.fr</a>
+        <a href="/mentions-legales.html">Mentions légales &amp; CGV</a>
+        <a href="https://github.com/HaitoDann">GitHub</a>
+      </div>
     </div>
   </footer>
+  <script>document.querySelectorAll('.vx-year').forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
 
   <button class="to-top" aria-label="Revenir en haut">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <script src="script.js?v=14"></script>
+  <script src="script.js?v=15"></script>
 </body>
 </html>

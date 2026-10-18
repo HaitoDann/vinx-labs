@@ -13,19 +13,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/vinx.css" />
+  <link rel="stylesheet" href="/assets/shell.css" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
-  <header>
-    <nav class="nav container">
-      <a href="./" class="brand"><img src="assets/vinx-logo.svg" alt="" width="32" height="23" /><span>VinX Labs</span></a>
-      <ul class="nav-links">
-        <li><a href="nilo/">Nilo</a></li>
-        <li><a href="./#about">Contact</a></li>
-        <li><a href="en/legal.html" class="lang" hreflang="en">EN</a></li>
+  <div class="vx-bar">
+    <nav class="vx-wrap" aria-label="VinX Labs">
+      <a href="/" class="vx-brand"><img src="/assets/vinx-logo.svg" alt="" width="26" height="19" />VinX Labs</a>
+      <ul class="vx-links">
+        <li><a href="/#products">Logiciels</a></li>
+        <li class="vx-hide-sm"><a href="/#about">Contact</a></li>
+        <li><a href="/en/legal.html" class="vx-lang" hreflang="en">EN</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
 
   <main>
     <article class="container prose">
@@ -56,16 +57,16 @@
     </article>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year">2026</span> VinX Labs</p>
-      <div class="footer-links">
+  <footer class="vx-footer">
+    <div class="vx-wrap">
+      <a href="/" class="vx-brand"><img src="/assets/vinx-logo.svg" alt="" width="20" height="14" /><span>© <span class="vx-year">2026</span> VinX Labs</span></a>
+      <div class="vx-footer-links">
         <a href="mailto:contact@vinxlabs.fr">contact@vinxlabs.fr</a>
-        <a href="mentions-legales.html">Mentions légales &amp; CGV</a>
+        <a href="/mentions-legales.html">Mentions légales &amp; CGV</a>
         <a href="https://github.com/HaitoDann">GitHub</a>
       </div>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>document.querySelectorAll('.vx-year').forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
 </body>
 </html>
