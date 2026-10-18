@@ -324,3 +324,5 @@ code {
 .price-card .btn { justify-content: center; }
 .pricing-sub { text-align: center; color: var(--text-soft); font-size: 14px; margin-top: 26px; }
 .pricing-sub a { color: var(--primary); }
+.footer-vinx { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; }
+.footer-vinx img { width: 20px; height: auto; }
