@@ -139,10 +139,12 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .product::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: radial-gradient(70% 90% at 0% 0%, var(--product-glow, transparent), transparent 70%);
-  opacity: .9; transition: opacity .2s;
+  opacity: 0; transition: opacity .45s ease;
 }
+.product:hover::before, .product:focus-visible::before { opacity: 1; }
 .product-nilo { --product-glow: rgba(31,130,211,.22); }
 .product-nilo:hover { border-color: rgba(52,164,223,.55); }
+.product-nilo .product-link { color: #34a4df; }
 /* À propos en blocs */
 .about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .about-tile { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 28px; }
