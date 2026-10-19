@@ -117,3 +117,49 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   .hero { padding: 72px 0 56px; }
   .section { padding: 72px 0; }
 }
+
+/* ===== Ambiance ===== */
+/* Grille de points dans le hero, estompée vers le bas */
+.hero { position: relative; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(236,241,238,.14) 1px, transparent 1.3px);
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 90% at 60% 30%, #000 30%, transparent 75%);
+          mask-image: radial-gradient(ellipse 80% 90% at 60% 30%, #000 30%, transparent 75%);
+}
+.hero .container { position: relative; z-index: 1; }
+/* Logo VinX en filigrane à droite */
+.hero-mark {
+  position: absolute; right: max(24px, calc(50% - 560px)); top: 50%; transform: translateY(-50%);
+  width: min(420px, 38vw); height: auto; opacity: .07; pointer-events: none;
+}
+/* Reflet de la couleur du produit dans sa carte */
+.product { position: relative; isolation: isolate; }
+.product::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(70% 90% at 0% 0%, var(--product-glow, transparent), transparent 70%);
+  opacity: .9; transition: opacity .2s;
+}
+.product-nilo { --product-glow: rgba(31,130,211,.22); }
+.product-nilo:hover { border-color: rgba(52,164,223,.55); }
+/* À propos en blocs */
+.about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.about-tile { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 28px; }
+.about-icon { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; margin-bottom: 18px; color: var(--accent); background: rgba(16,222,140,.08); border: 1px solid rgba(16,222,140,.18); }
+.about-tile h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.about-tile p { color: var(--text-soft); font-size: 15.5px; }
+.about-tile a { display: inline-block; margin-top: 10px; color: var(--accent); font-weight: 500; }
+.about-tile a:hover { text-decoration: underline; }
+/* Apparition au défilement */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .js .product.reveal.in:hover { transform: translateY(-3px); }
+  .js .about-tile.reveal:nth-child(2) { transition-delay: .08s; }
+  .js .about-tile.reveal:nth-child(3) { transition-delay: .16s; }
+}
+@media (max-width: 760px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .hero-mark { width: 220px; opacity: .05; top: 20%; }
+}
