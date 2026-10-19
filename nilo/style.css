@@ -332,3 +332,26 @@ code {
 .site-header.scrolled { top: 0; }
 .site-footer { padding-bottom: 0; }
 .footer-inner { padding-bottom: 50px; }
+
+/* ===== Refonte épurée ===== */
+/* Une seule barre : la marque VinX Labs passe en signature discrète */
+.brand-by {
+  margin: 0 auto 0 14px; padding-left: 14px; border-left: 1px solid rgba(255,255,255,.3);
+  font-size: 13px; font-weight: 500; color: rgba(255,255,255,.7); transition: color .15s;
+}
+.brand-by:hover { color: #fff; }
+/* Bouton du header secondaire : le hero porte l'action principale */
+.btn-nav, .nav-links .btn-nav { background: transparent; color: #fff; border-color: rgba(255,255,255,.5); }
+.btn-nav:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+.hero-badge {
+  display: inline-block; margin: 0 10px 14px 0; padding: 3px 10px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3); color: #fff;
+}
+/* Capture plus grande et lisible */
+.hero-inner { grid-template-columns: 5fr 7fr; }
+.screenshot-carousel { max-width: 680px; }
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .brand-by { display: none; }
+}

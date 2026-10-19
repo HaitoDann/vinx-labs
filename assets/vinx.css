@@ -96,3 +96,24 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   .product-info { padding: 26px; }
   .product-thumb { padding: 0 0 0 26px; max-height: 220px; }
 }
+
+/* ===== Refonte épurée ===== */
+.hero { padding: 120px 0 96px; }
+.hero h1 { font-size: clamp(2.4rem, 5.4vw, 4rem); max-width: 16ch; letter-spacing: -0.03em; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+.btn { transition: background .15s, border-color .15s, transform .15s; }
+.btn:hover { transform: translateY(-1px); }
+.section { padding: 112px 0; }
+/* Carte produit : bordure discrète, élévation au survol, capture encadrée */
+.product { border-radius: 14px; transition: border-color .2s, transform .2s, box-shadow .2s; }
+.product:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); transform: translateY(-3px); box-shadow: 0 24px 50px -24px rgba(0,0,0,.7); }
+.product-thumb { padding: 40px 0 0 8px; }
+.product-thumb img { border-radius: 10px 0 0 0; box-shadow: 0 20px 40px -18px rgba(0,0,0,.6); }
+.product-soon {
+  margin-top: 20px; padding: 26px; border: 1px dashed var(--border); border-radius: 14px;
+  text-align: center; color: var(--text-faint); font-size: 15px;
+}
+@media (max-width: 760px) {
+  .hero { padding: 72px 0 56px; }
+  .section { padding: 72px 0; }
+}
