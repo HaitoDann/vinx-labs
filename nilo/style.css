@@ -21,8 +21,8 @@
   --radius-sm: 9px;
   --max: 1160px;
   --ease: cubic-bezier(.22, .68, .18, 1);
-  --font-body: 'Onest', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-display: 'Space Grotesk', 'Onest', system-ui, sans-serif;
+  --font-body: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Roboto', system-ui, sans-serif;
 }
 
 /* ===== Reset & base ===== */

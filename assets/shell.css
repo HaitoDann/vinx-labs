@@ -3,7 +3,7 @@
 .vx-bar, .vx-footer {
   --vx-bg: #0c0f0e; --vx-text: #ecf1ee; --vx-soft: #a3afa9; --vx-line: #252d29; --vx-accent: #10de8c;
   background: var(--vx-bg); color: var(--vx-soft);
-  font-family: 'Onest', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.5;
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.5;
 }
 .vx-bar a, .vx-footer a { color: inherit; text-decoration: none; transition: color .15s; }
 .vx-bar a:hover, .vx-footer a:hover { color: var(--vx-text); }
@@ -11,7 +11,7 @@
 
 .vx-bar { position: relative; z-index: 70; border-bottom: 1px solid var(--vx-line); }
 .vx-bar .vx-wrap { height: 52px; }
-.vx-brand { display: flex; align-items: center; gap: 10px; color: var(--vx-text) !important; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: -0.01em; }
+.vx-brand { display: flex; align-items: center; gap: 10px; color: var(--vx-text) !important; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: -0.01em; }
 .vx-brand img { width: 26px; height: auto; }
 .vx-links { list-style: none; display: flex; align-items: center; gap: 24px; margin: 0; padding: 0; }
 .vx-links a[aria-current] { color: var(--vx-text); }
