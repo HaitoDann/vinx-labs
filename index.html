@@ -35,35 +35,78 @@
 
   <main>
     <section class="hero">
-      <div class="container">
-        <h1>VinX Labs</h1>
-        <p class="hero-lead">Studio indépendant de développement logiciel, basé en France.</p>
+      <div class="container hero-center">
+        <span class="eyebrow">Studio logiciel indépendant · France</span>
+        <h1>Des logiciels <em>simples</em>, fiables et respectueux de vos données.</h1>
+        <p class="hero-lead">VinX Labs conçoit des applications de bureau qui fonctionnent hors-ligne, sans abonnement ni collecte de données. Chaque outil fait une chose, et la fait correctement.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-accent">Découvrir nos logiciels</a>
+          <a href="#about" class="btn btn-line">Nous contacter</a>
+        </div>
       </div>
     </section>
 
     <section class="section" id="products">
       <div class="container">
-        <h2>Nos logiciels</h2>
+        <div class="section-head">
+          <span class="eyebrow">Produits</span>
+          <h2>Nos logiciels</h2>
+          <p>Des outils pensés pour le travail au quotidien, installés en quelques secondes.</p>
+        </div>
         <a href="nilo/" class="product">
           <div class="product-info">
-            <img src="nilo/assets/logo.png" alt="" class="product-logo" width="72" height="72" />
-            <h3>Nilo</h3>
-            <p>Gestion de projets 100&nbsp;% hors-ligne : Kanban, Gantt, liste et calendrier.</p>
-            <p class="product-meta">Windows 10/11 · Gratuit pour les particuliers<br />Licence entreprise : 49&nbsp;€, paiement unique</p>
-            <span class="product-link">Voir Nilo</span>
+            <div class="product-top">
+              <img src="nilo/assets/logo.png" alt="" class="product-logo" width="56" height="56" />
+              <div><h3>Nilo</h3><span class="badge">Disponible</span></div>
+            </div>
+            <p class="product-desc">Gestion de projets 100&nbsp;% hors-ligne&nbsp;: Kanban, Gantt, liste et calendrier.</p>
+            <ul class="checks">
+              <li>Windows 10 / 11</li>
+              <li>Gratuit pour les particuliers</li>
+              <li>Licence entreprise&nbsp;: 49&nbsp;€, paiement unique</li>
+            </ul>
+            <span class="product-link">Découvrir Nilo</span>
           </div>
-          <div class="product-thumb"><img src="nilo/assets/screenshot-gantt.png" alt="" loading="lazy" /></div>
+          <div class="product-thumb"><img src="nilo/assets/screenshot-gantt.png" alt="Nilo" loading="lazy" /></div>
         </a>
-        <p class="more">D’autres logiciels suivront.</p>
+        <p class="more">D’autres logiciels sont en préparation.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Notre approche</span>
+          <h2>Ce qui guide chaque logiciel</h2>
+        </div>
+        <div class="values">
+          <div class="value">
+            <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <h3>Vos données restent chez vous</h3>
+            <p>Aucun compte, aucun cloud imposé, aucun suivi. Tout est stocké localement sur votre machine.</p>
+          </div>
+          <div class="value">
+            <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+            <h3>Un prix clair, une seule fois</h3>
+            <p>Pas d’abonnement : gratuit pour un usage personnel, licence perpétuelle pour les professionnels.</p>
+          </div>
+          <div class="value">
+            <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.5"/></svg></div>
+            <h3>L’essentiel, bien fait</h3>
+            <p>Des interfaces sobres et rapides, conçues pour un usage précis plutôt que pour tout faire.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="about">
-      <div class="container about">
-        <h2>À propos</h2>
-        <div>
-          <p>VinX Labs est un studio indépendant basé en France. Chaque logiciel est conçu pour faire une chose, et la faire correctement.</p>
-          <p>Une question, une demande de devis ou un problème de licence&nbsp;: <a href="mailto:contact@vinxlabs.fr">contact@vinxlabs.fr</a></p>
+      <div class="container">
+        <div class="cta">
+          <h2>Une question, un devis, une licence&nbsp;?</h2>
+          <p>Écrivez-nous directement, c’est une vraie personne qui vous répond.</p>
+          <div class="hero-actions">
+            <a href="mailto:contact@vinxlabs.fr" class="btn btn-accent">contact@vinxlabs.fr</a>
+          </div>
         </div>
       </div>
     </section>

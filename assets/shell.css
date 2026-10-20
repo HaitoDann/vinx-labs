@@ -10,7 +10,7 @@
 .vx-wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 
 .vx-bar { position: relative; z-index: 70; border-bottom: 1px solid var(--vx-line); }
-.vx-bar .vx-wrap { height: 52px; }
+.vx-bar .vx-wrap { height: 60px; }
 .vx-brand { display: flex; align-items: center; gap: 10px; color: var(--vx-text) !important; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: -0.01em; }
 .vx-brand img { width: 26px; height: auto; }
 .vx-links { list-style: none; display: flex; align-items: center; gap: 24px; margin: 0; padding: 0; }
