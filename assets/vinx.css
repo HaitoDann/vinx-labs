@@ -165,3 +165,13 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   .about-grid { grid-template-columns: 1fr; }
   .hero-mark { width: 220px; opacity: .05; top: 20%; }
 }
+
+/* ===== Page 404 ===== */
+.hero-404 { min-height: calc(100vh - 140px); display: flex; align-items: center; }
+.hero-404 .container { width: 100%; }
+.code-404 {
+  font-family: var(--font-display); font-weight: 700; font-size: clamp(4.5rem, 12vw, 8rem);
+  line-height: 1; letter-spacing: -0.04em; margin-bottom: 12px;
+  background: linear-gradient(180deg, var(--accent), rgba(16,222,140,.25));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
