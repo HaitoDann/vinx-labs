@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/vinx.css" />
+  <link rel="stylesheet" href="/assets/vinx.css?v=3" />
   <link rel="stylesheet" href="/assets/shell.css" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
 </head>
@@ -26,11 +26,16 @@
   </div>
 
   <main>
-    <section class="hero">
+    <section class="hero hero-404">
+      <img src="/assets/vinx-logo.svg" alt="" class="hero-mark" aria-hidden="true" />
       <div class="container">
+        <p class="code-404">404</p>
         <h1>Page introuvable</h1>
-        <p class="hero-lead">Cette page n’existe pas ou a été déplacée. <a href="/" class="link">Retour à l’accueil</a><br />
-        This page doesn’t exist. <a href="/en/" class="link">Back to home</a></p>
+        <p class="hero-lead">Cette page n’existe pas ou a été déplacée.<br /><span lang="en">This page doesn’t exist or has moved.</span></p>
+        <div class="hero-actions">
+          <a href="/" class="btn btn-accent">Retour à l’accueil</a>
+          <a href="/en/" class="btn btn-line" lang="en">Back to home</a>
+        </div>
       </div>
     </section>
   </main>
