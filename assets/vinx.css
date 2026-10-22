@@ -175,3 +175,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   background: linear-gradient(180deg, var(--accent), rgba(16,222,140,.25));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
+
+/* ===== Aperçu produit centré, avec marge sur tous les côtés ===== */
+.product-thumb { padding: 32px; display: flex; align-items: center; justify-content: center; max-height: none; }
+.product-thumb img { width: 100%; height: auto; object-fit: contain; border: 1px solid var(--border); border-radius: 10px; }
+@media (max-width: 760px) {
+  .product-thumb { padding: 0 20px 20px; }
+}

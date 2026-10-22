@@ -355,3 +355,5 @@ code {
   .hero-inner { grid-template-columns: 1fr; }
   .brand-by { display: none; }
 }
+.footer-brand { display: flex; align-items: center; gap: 10px; }
+.footer-logo { width: 28px; height: 28px; }
