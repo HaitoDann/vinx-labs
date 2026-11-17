@@ -12,7 +12,7 @@ nilo/                  → style.css, script.js, assets (thème Nilo, bleu)
 
 ## À compléter avant la mise en ligne
 
-- Lien Lemon Squeezy : chercher `VOTRE-BOUTIQUE.lemonsqueezy.com` dans `nilo/index.html` et `en/nilo/index.html`.
+- Lien d'achat Polar : variable `TARGET` dans `nilo/acheter.html` (le bouton du site et celui de l'app y renvoient) ; espace client : `TARGET` dans `nilo/compte.html`.
 - Mentions légales : remplacer les champs surlignés en jaune dans `mentions-legales.html` et `en/legal.html`.
 - Domaine : créer un fichier `CNAME` contenant le domaine (`vinxlabs.fr`), puis configurer le DNS
   (Settings → Pages → Custom domain).

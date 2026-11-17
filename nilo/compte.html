@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espace client Nilo — VinX Labs</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <!--
+    Customer area of Nilo Business license buyers (keys, invoices): redirects to the Polar customer portal (https://polar.sh/<organization-slug>/portal).
+    Nilo (the app) opens this page, so the Polar link can change without a new
+    app release. To change the destination, edit TARGET below (one place).
+    Empty TARGET = not open yet: the page shows a message instead.
+  -->
+  <style>
+    body { font-family: Roboto, system-ui, sans-serif; background: #fff; color: #1b1f20; margin: 0; padding: 48px 16px; text-align: center; line-height: 1.5; }
+    a { color: #0f766e; }
+    [hidden] { display: none; }
+    @media (prefers-color-scheme: dark) { body { background: #1b1f20; color: #e8eaea; } a { color: #5eead4; } }
+  </style>
+</head>
+<body>
+  <div id="go" hidden>
+    <p>Redirection vers votre espace client (Polar)…<br /><span lang="en">Redirecting to your customer area (Polar)…</span></p>
+    <p><a id="link" href="/nilo/">Continuer / Continue</a></p>
+  </div>
+  <div id="soon">
+    <p>L'espace client n'est pas encore ouvert. Pour retrouver une clé ou une facture, écrivez-nous.<br /><span lang="en">The customer area is not open yet. To retrieve a key or an invoice, please e-mail us.</span></p>
+    <p><a href="mailto:contact@vinxlabs.fr">contact@vinxlabs.fr</a> · <a href="/nilo/">Nilo</a></p>
+  </div>
+  <script>
+    var TARGET = "";
+    if (TARGET) {
+      document.getElementById("soon").hidden = true;
+      document.getElementById("go").hidden = false;
+      document.getElementById("link").href = TARGET;
+      window.location.replace(TARGET);
+    }
+  </script>
+</body>
+</html>
