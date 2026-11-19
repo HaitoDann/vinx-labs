@@ -38,7 +38,7 @@ POLAR_PORTAL_URL: ""      // espace client Polar (clés, factures)
 ```
 
 Tant que la valeur est vide, `/nilo/acheter.html` et `/nilo/compte.html` (et leurs équivalents
-`/en/nilo/…`) affichent « ouvre bientôt ». Dès qu'une URL `https://…` est renseignée, la page
+`/en/nilo/…`) affichent « ouvre bientôt ». Dès qu'une URL `https://…` (hôte `polar.sh` ou sous-domaine uniquement) est renseignée, la page
 redirige automatiquement. L'application Nilo pointe déjà vers ces deux pages ; tous les boutons
 « Acheter » du site pointent vers `/nilo/acheter.html` (ou `/en/nilo/buy.html`).
 
