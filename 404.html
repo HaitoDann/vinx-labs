@@ -1,55 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page introuvable — VinX Labs</title>
-  <meta name="robots" content="noindex" />
-  <meta name="description" content="VinX Labs, studio indépendant de développement logiciel basé en France." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/vinx.css?v=3" />
-  <link rel="stylesheet" href="/assets/shell.css" />
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page introuvable — Page not found | VinX Labs</title>
+<meta name="description" content="Page introuvable. Page not found.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<script src="/assets/theme.js"></script>
 </head>
 <body>
-  <div class="vx-bar">
-    <nav class="vx-wrap" aria-label="VinX Labs">
-      <a href="/" class="vx-brand"><img src="/assets/vinx-logo.svg" alt="" width="26" height="19" />VinX Labs</a>
-      <ul class="vx-links">
-        <li><a href="/#products">Logiciels</a></li>
-        <li class="vx-hide-sm"><a href="/#about">Contact</a></li>
-        <li><a href="/en/" class="vx-lang" hreflang="en">EN</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <main>
-    <section class="hero hero-404">
-      <img src="/assets/vinx-logo.svg" alt="" class="hero-mark" aria-hidden="true" />
-      <div class="container">
-        <p class="code-404">404</p>
-        <h1>Page introuvable</h1>
-        <p class="hero-lead">Cette page n’existe pas ou a été déplacée.<br /><span lang="en">This page doesn’t exist or has moved.</span></p>
-        <div class="hero-actions">
-          <a href="/" class="btn btn-accent">Retour à l’accueil</a>
-          <a href="/en/" class="btn btn-line" lang="en">Back to home</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="vx-footer">
-    <div class="vx-wrap">
-      <a href="/" class="vx-brand"><img src="/assets/vinx-logo.svg" alt="" width="20" height="14" /><span>© <span class="vx-year">2026</span> VinX Labs</span></a>
-      <div class="vx-footer-links">
-        <a href="mailto:contact@vinxlabs.fr">contact@vinxlabs.fr</a>
-        <a href="/mentions-legales.html">Mentions légales &amp; CGV</a>
-        <a href="https://github.com/HaitoDann">GitHub</a>
-      </div>
-    </div>
-  </footer>
-  <script>document.querySelectorAll('.vx-year').forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="h"><a class="brand" href="/"><span class="lg-vx" aria-hidden="true"></span><span>VinX Labs</span></a><nav aria-label="VinX Labs"><a href="/nilo/">Nilo</a><a href="/VinX-OS/">VinX OS</a></nav><div class="tools"><button type="button" data-theme-toggle aria-pressed="false">Mode sombre</button></div><a class="btn btn-s" href="mailto:contact@vinxlabs.fr">Contact</a></header>
+<main id="main">
+<section class="prose center-page"><p class="code-404">404</p><h1>Page introuvable</h1>
+<p class="lead">Cette page n'existe pas ou a été déplacée.<br><span lang="en">This page doesn't exist or has moved.</span></p>
+<div class="ctas"><a class="btn" href="/">Retour à l'accueil</a><a class="btn btn-o" href="/en/" lang="en">Back to home</a></div></section>
+</main>
+<footer class="f"><div><p><strong>VinX Labs</strong> — Éditeur de logiciels</p></div><div><span class="k">Produits</span><a href="/nilo/">Nilo</a><a href="/VinX-OS/">VinX OS</a></div><div><span class="k">Éditeur</span><a href="mailto:contact@vinxlabs.fr">Contact</a><a href="/mentions-legales.html">Mentions légales et CGV</a><a href="/confidentialite.html">Confidentialité</a></div><p class="f-n">© 2026 VinX Labs · France</p></footer>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
