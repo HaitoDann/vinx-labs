@@ -30,23 +30,21 @@ assets/favicon.svg, assets/og.png, nilo/assets/og-nilo.png
 
 ## Où modifier les URL Polar
 
-**Un seul fichier : `assets/config.js`.**
+**Fichier principal : `assets/config.js`** (`POLAR_CHECKOUT_URL`, `POLAR_PORTAL_URL`).
 
-```js
-POLAR_CHECKOUT_URL: "",   // page de paiement de la licence Entreprise
-POLAR_PORTAL_URL: ""      // espace client Polar (clés, factures)
-```
-
-Tant que la valeur est vide, `/nilo/acheter.html` et `/nilo/compte.html` (et leurs équivalents
-`/en/nilo/…`) affichent « ouvre bientôt ». Dès qu'une URL `https://…` (hôte `polar.sh` ou sous-domaine uniquement) est renseignée, la page
-redirige automatiquement. L'application Nilo pointe déjà vers ces deux pages ; tous les boutons
-« Acheter » du site pointent vers `/nilo/acheter.html` (ou `/en/nilo/buy.html`).
+`/nilo/acheter.html` et `/nilo/compte.html` (et `/en/nilo/buy.html`, `/en/nilo/account.html`)
+redirigent vers ces URL, à condition qu'elles soient en `https` et sur `polar.sh` ou un
+sous-domaine ; si une valeur est vide ou refusée, la page affiche « ouvre bientôt ». L'application
+Nilo pointe déjà vers ces deux pages ; tous les boutons « Acheter » du site aussi.
+Ces 4 pages contiennent en plus un lien direct de secours (cas sans JavaScript) : si l'URL change,
+le mettre à jour aussi (chercher `polar.sh` dans `nilo/` et `en/nilo/`).
 
 ## À compléter
 
-- Mentions légales : médiateur de la consommation (non connu, absent du texte actuel ; à ajouter si requis).
-- Lien de la fiche Microsoft Store dans `nilo/index.html` et `en/nilo/index.html` (commentaire
-  `À COMPLÉTER`) ; en attendant, le lien renvoie vers la page des téléchargements.
+- Mentions légales (FR et EN) : médiateur de la consommation et TVA (champs `.todo`, commentaires `À COMPLÉTER`).
+- Lien de la fiche Microsoft Store dans `nilo/index.html` et `en/nilo/index.html` (commentaire `À COMPLÉTER`) ; en attendant, le lien renvoie vers la page des téléchargements.
+- Page VinX OS non annoncée : `noindex` et absente du sitemap. Pour l'annoncer, retirer l'identifiant de la page de la liste des pages non annoncées du générateur, ou supprimer `<meta name="robots">` des deux pages et les ajouter à `sitemap.xml`.
+- `vinx-os/index.html` (minuscules) redirige vers `/VinX-OS/` ; à ne pas confondre avec `VinX-OS/` (casse).
 
 ## Prévisualiser
 

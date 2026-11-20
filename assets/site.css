@@ -187,3 +187,4 @@ section{position:relative}
 .center-page{min-height:60vh}
 .shot picture,.crop picture{display:block}
 .prose code{font:14px "IBM Plex Mono",monospace;background:var(--bg2);padding:1px 5px}
+[hidden]{display:none!important}
