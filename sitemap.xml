@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://vinxlabs.fr/</loc></url>
-  <url><loc>https://vinxlabs.fr/en/</loc></url>
-  <url><loc>https://vinxlabs.fr/nilo/</loc></url>
-  <url><loc>https://vinxlabs.fr/en/nilo/</loc></url>
-  <url><loc>https://vinxlabs.fr/mentions-legales.html</loc></url>
-  <url><loc>https://vinxlabs.fr/en/legal.html</loc></url>
-  <url><loc>https://vinxlabs.fr/confidentialite.html</loc></url>
-  <url><loc>https://vinxlabs.fr/en/privacy.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://vinxlabs.fr/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/"/>
+  </url>
+  <url>
+    <loc>https://vinxlabs.fr/en/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/"/>
+  </url>
+  <url>
+    <loc>https://vinxlabs.fr/nilo/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/nilo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/nilo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/nilo/"/>
+  </url>
+  <url>
+    <loc>https://vinxlabs.fr/en/nilo/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/nilo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/nilo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/nilo/"/>
+  </url>
+  <url>
+    <loc>https://vinxlabs.fr/mentions-legales.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/mentions-legales.html"/>
+  </url>
+  <url>
+    <loc>https://vinxlabs.fr/en/legal.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/mentions-legales.html"/>
+  </url>
+  <url>
+    <loc>https://vinxlabs.fr/confidentialite.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/confidentialite.html"/>
+  </url>
+  <url>
+    <loc>https://vinxlabs.fr/en/privacy.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/confidentialite.html"/>
+  </url>
 </urlset>
