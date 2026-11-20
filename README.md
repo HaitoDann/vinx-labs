@@ -43,7 +43,7 @@ le mettre à jour aussi (chercher `polar.sh` dans `nilo/` et `en/nilo/`).
 
 - Mentions légales (FR et EN) : médiateur de la consommation et TVA (champs `.todo`, commentaires `À COMPLÉTER`).
 - Lien de la fiche Microsoft Store dans `nilo/index.html` et `en/nilo/index.html` (commentaire `À COMPLÉTER`) ; en attendant, le lien renvoie vers la page des téléchargements.
-- Page VinX OS non annoncée : `noindex` et absente du sitemap. Pour l'annoncer, retirer l'identifiant de la page de la liste des pages non annoncées du générateur, ou supprimer `<meta name="robots">` des deux pages et les ajouter à `sitemap.xml`.
+- VinX OS est non annoncé jusqu'à sa 1.0 publique : pages `VinX-OS/` et `en/VinX-OS/` en `noindex`, hors sitemap, sans aucun lien depuis les autres pages (accueil recomposé pour Nilo seul). Pour le ré-annoncer : retirer le `<meta name="robots">` des deux pages, les ajouter à `sitemap.xml`, et remettre les liens (carte et index de l'accueil, menu, pied de page, accueil EN) ; le générateur utilisé pour la refonte le fait en vidant son drapeau `UNANNOUNCED`.
 - `vinx-os/index.html` (minuscules) redirige vers `/VinX-OS/` ; à ne pas confondre avec `VinX-OS/` (casse).
 
 ## Prévisualiser
