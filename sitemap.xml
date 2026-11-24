@@ -56,4 +56,32 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/confidentialite.html"/>
   </url>
+  <url>
+    <loc>https://vinxlabs.fr/soutenir.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/soutenir.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/soutenir.html"/>
+  </url>
+  <url>
+    <loc>https://vinxlabs.fr/en/support.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/soutenir.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/soutenir.html"/>
+  </url>
+  <url>
+    <loc>https://vinxlabs.fr/a-propos.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/a-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/a-propos.html"/>
+  </url>
+  <url>
+    <loc>https://vinxlabs.fr/en/about.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vinxlabs.fr/a-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vinxlabs.fr/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vinxlabs.fr/a-propos.html"/>
+  </url>
 </urlset>

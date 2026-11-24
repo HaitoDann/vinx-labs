@@ -60,4 +60,26 @@
     });
     select(0, false);
   });
+
+  /* Menu déroulant : fermeture au clic extérieur et avec Échap. */
+  document.addEventListener("click", function (e) {
+    Array.prototype.forEach.call(document.querySelectorAll("details.dd[open]"), function (d) { if (!d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") Array.prototype.forEach.call(document.querySelectorAll("details.dd[open]"), function (d) { d.open = false; d.querySelector("summary").focus(); });
+  });
+
+  /* Copier une adresse. */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-copy]"), function (b) {
+    b.addEventListener("click", function () {
+      var t = document.getElementById(b.getAttribute("data-copy")).textContent.trim(), old = b.textContent;
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { b.textContent = "✓"; setTimeout(function () { b.textContent = old; }, 1500); });
+    });
+  });
+
+  /* Produits : défilement continu dès qu'il y en a au moins trois. */
+  Array.prototype.forEach.call(document.querySelectorAll(".prods-t"), function (t) {
+    var r = t.querySelector(".prods-r");
+    if (r && r.children.length >= 3) { r.innerHTML += r.innerHTML.replace(/<li>/g, '<li aria-hidden="true">'); t.classList.add("run"); }
+  });
 })();

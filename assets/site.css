@@ -203,7 +203,6 @@ section{position:relative}
  background-image:radial-gradient(light-dark(rgba(6,19,13,.12),rgba(255,255,255,.08)) 1px,transparent 1px);background-size:18px 18px;
  -webkit-mask:linear-gradient(#000,transparent 80%);mask:linear-gradient(#000,transparent 80%)}
 .hero-scene{position:relative}
-.hero-scene::before{content:"";position:absolute;inset:8% 10% -4%;z-index:-1;background:radial-gradient(closest-side,var(--glow),transparent);filter:blur(30px)}
 .ph{position:relative;isolation:isolate}
 /* 3. Couleur : le dégradé du logo Nilo */
 .nilo .btn:not(.btn-o),.nilo-t .btn:not(.btn-o),.btn-b{background:var(--grad);color:#fff;border-radius:6px;box-shadow:0 6px 18px -6px rgba(26,109,179,.6);transition:transform .15s,box-shadow .15s}
@@ -229,7 +228,7 @@ section{position:relative}
 .pcard img{width:48px;height:48px;flex:none}
 .pcard strong{display:block;font-size:19px}
 .pcard em{font-style:normal;font-size:14px;color:var(--mut)}
-.pcard-go{margin-left:auto;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#fff;font-weight:700;transition:transform .2s}
+.pcard-go{margin-left:auto;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:var(--gradfg);font-weight:700;transition:transform .2s}
 .pcard:hover .pcard-go{transform:translateX(4px)}
 .home .hp{padding-top:clamp(24px,4vw,40px)}
 /* 5. Tarif */
@@ -268,3 +267,187 @@ section{position:relative}
 /* Retours de revue : boutons d'origine dans l'en-tête et pour l'achat */
 .h .btn:not(.btn-o),.plan.x .btn:not(.btn-o){background:var(--act);color:var(--actfg);border-radius:2px;box-shadow:none;transform:none}
 .h .btn:not(.btn-o):hover,.plan.x .btn:not(.btn-o):hover{filter:brightness(1.08);box-shadow:none;transform:none}
+
+/* ── Lot 3 ── */
+/* 1. Cohérence : deux rayons, une famille d'ombres, motifs limités */
+:root{--r-btn:6px;--r-card:12px}
+.btn,.h .btn:not(.btn-o),.plan.x .btn:not(.btn-o),.btn-o{border-radius:var(--r-btn)}
+.win,.scene,.crop,.ov .shot{border-radius:var(--r-card)}
+.plan,.pcard,.nb-in,.hp-s{border-radius:calc(var(--r-card) + 4px)}
+.obj-i{border-radius:var(--r-card);box-shadow:var(--sh-soft)}
+.corner{display:none}
+.nb .corner{display:block}
+/* 3. Hero de la page Nilo */
+.ph::before{content:"";position:absolute;inset:0 0 30%;z-index:-1;
+ background:radial-gradient(light-dark(rgba(6,19,13,.10),rgba(255,255,255,.07)) 1px,transparent 1px);
+ background-size:22px 22px;-webkit-mask:linear-gradient(#000 30%,transparent);mask:linear-gradient(#000 30%,transparent)}
+@media (min-width:820px) and (prefers-reduced-motion:no-preference){
+ .hero-scene{perspective:1800px}
+ .hero-scene>*{transform:rotateX(5deg);transform-origin:50% 0;transition:transform .6s ease}
+ .hero-scene:hover>*{transform:none}}
+/* 4. Typographie */
+.meta,.amt-n{font:400 13px/1.5 "IBM Plex Sans",sans-serif;letter-spacing:.01em}
+.eyebrow{margin:0 0 8px;font:600 13px "IBM Plex Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.detail .sep{display:none}
+/* 5. Mobile */
+@media (max-width:640px){
+ .h{gap:8px 12px;padding-block:10px}
+ .h nav{order:3;width:100%;margin-left:0;gap:16px;overflow-x:auto}
+ .tools{margin-left:auto}
+ .brand .lg-vx,.brand img{height:26px}
+ .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+ .tabs button{white-space:nowrap}
+ .pcard{padding:12px 14px}
+ .plan{padding:22px}
+ .hh h1{font-size:clamp(32px,9vw,44px)}
+}
+/* 6. Pages secondaires */
+.prose{position:relative;isolation:isolate}
+main:has(>.prose){overflow-x:clip}
+.prose::before{content:"";position:absolute;left:0;width:100vw;top:0;height:300px;z-index:-1;
+ background:radial-gradient(40% 70% at 85% 0%,var(--glow),transparent 70%),radial-gradient(light-dark(rgba(6,19,13,.10),rgba(255,255,255,.07)) 1px,transparent 1px);
+ background-size:auto,22px 22px;-webkit-mask:linear-gradient(#000,transparent);mask:linear-gradient(#000,transparent)}
+.prose h2{border-top:0;padding-top:0;margin-top:44px;display:flex;align-items:center;gap:12px}
+.prose h2::before{content:"";flex:none;width:8px;height:8px;transform:rotate(45deg);background:var(--grad)}
+.center-page{display:flex;flex-direction:column;justify-content:center}
+.code-404{font:700 clamp(64px,12vw,120px)/1 "IBM Plex Sans",sans-serif;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.04em}
+/* Panneau de l'accueil plus visible en sombre (validé) */
+.hp-s{--glow:light-dark(rgba(43,179,232,.28),rgba(43,179,232,.30))}
+
+/* Accueil studio : liste de produits et section « Bientôt » */
+.plist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.pcard.soon{box-shadow:none;background:var(--bg2);border-style:dashed}
+.pcard.soon:hover{transform:none}
+.pi{flex:none;width:48px;height:48px;border-radius:var(--r-card);display:grid;place-items:center}
+.vx-i{background:#06130D}.vx-i .lg-vx{width:30px;color:#10DD8C}
+.sa-i{background:linear-gradient(135deg,#F6B73C,#E0702B);color:#fff;font:700 24px "IBM Plex Sans",sans-serif}
+.st{margin-left:auto;font:600 11px "IBM Plex Sans",sans-serif;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:99px;background:var(--bg);border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+.st.on{background:light-dark(#E3F4EA,#173326);border-color:transparent;color:light-dark(#14804A,#5FD3A0)}
+.pcard .st+.pcard-go{margin-left:0}
+.next{padding:clamp(40px,6vw,72px) var(--pad) clamp(56px,8vw,96px)}
+.next h2{margin-bottom:24px}
+.next-g{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (min-width:760px){.next-g{grid-template-columns:1fr 1fr}}
+.nc{position:relative;padding:26px;border:1px solid var(--line);border-radius:calc(var(--r-card) + 4px);background:var(--bg2);display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.nc h3{font-size:24px;margin-top:10px}
+.nc .tag{margin:0}
+.nc p{margin:0;max-width:48ch}
+.chip{margin-top:10px;font:500 12px "IBM Plex Sans",sans-serif;padding:4px 10px;border-radius:99px;border:1px dashed var(--line);color:var(--mut)}
+@media (max-width:520px){.pcard .st{display:none}}
+
+/* Accueil par catégories : Système d'exploitation / Applications */
+.cats a{flex-direction:column;gap:2px}
+.cats .k{font-weight:500}
+.cats strong{font-size:20px}
+.cats a::after{content:"↓";position:absolute;right:4px;top:50%;translate:0 -50%;color:var(--mut);transition:translate .2s}
+.cats li{position:relative}.cats a{position:relative}
+.cats a:hover{text-decoration:none}.cats a:hover::after{translate:0 -30%;color:var(--fg)}
+.cat{padding-top:clamp(40px,6vw,72px)}
+.cat-h{padding:0 var(--pad);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;border-bottom:0}
+.cat-h h2{font-size:clamp(28px,4vw,44px)}
+.cat-h p{margin:0;color:var(--mut)}
+.cat-os{background:var(--bg2)}
+.cat-os .hp-s{background:light-dark(#E6EBE8,#101315)}
+.cat-os .hp-s::before{display:none}
+.cat-os .hp-t::before{background:#10DD8C}
+.cat-os .btn-g{border-radius:var(--r-btn)}
+.vx-i.big{width:72px;height:72px;border-radius:16px}.vx-i.big .lg-vx{width:46px}
+.hp .tag .st{margin-left:8px;vertical-align:middle}
+.soon-row{margin:0 var(--pad) clamp(48px,7vw,88px);display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px dashed var(--line);border-radius:calc(var(--r-card) + 4px);background:var(--bg2)}
+.soon-row strong{display:block;font-size:18px}
+.soon-row em{font-style:normal;font-size:14px;color:var(--mut)}
+.home .hp{padding-top:clamp(24px,4vw,40px)}
+
+/* VinX OS discret dans l'en-tête de l'accueil */
+.tools a.os-l{width:34px;justify-content:center;padding:0;background:#06130D;border-radius:8px}
+.tools a.os-l .lg-vx{width:20px;color:#10DD8C}
+.tools a.os-l:hover{background:#06130D;filter:brightness(1.3)}
+/* Accueil applications */
+.cat-apps{padding-top:0}
+.sup-l{margin:0 var(--pad) clamp(48px,7vw,80px);color:var(--mut);font-size:15px}
+/* Page Soutenir */
+.don-h{position:relative;isolation:isolate;padding:clamp(56px,9vw,104px) var(--pad) clamp(28px,4vw,40px)}
+.don-h::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(light-dark(rgba(6,19,13,.10),rgba(255,255,255,.07)) 1px,transparent 1px);background-size:22px 22px;-webkit-mask:linear-gradient(#000,transparent);mask:linear-gradient(#000,transparent)}
+.don-h h1{max-width:22ch}
+.don{padding:0 var(--pad) clamp(56px,8vw,96px);max-width:calc(980px + 2 * var(--pad))}
+.don-g{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (min-width:700px){.don-g{grid-template-columns:1fr 1fr}}
+.don-c{padding:26px;border:1px solid var(--line);border-radius:calc(var(--r-card) + 4px);background:var(--bg);display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.don-c:first-child{background:var(--bg2)}
+.don-c h2{font-size:22px}
+.don-c p{margin:0;color:var(--mut);max-width:44ch}
+.don-c .btn{margin-top:8px;background:var(--grad);color:#fff;box-shadow:none}
+.don-c .btn-soft{background:var(--bg2);color:var(--fg)}
+.don-c .meta{margin:0}
+.todo-n{margin:16px 0 0;font-size:14px}
+.don-t{font-size:22px;margin:48px 0 12px}
+.don-l{margin:0 0 24px;padding-left:20px;max-width:65ch}
+.don-l li{margin:6px 0}
+
+/* ── Thème VinX Labs : vert du logo pour les pages générales, bleu réservé à Nilo ── */
+:root{
+ --act:light-dark(#0A8F5A,#10DD8C);--actfg:light-dark(#FFFFFF,#06130D);
+ --lnk:light-dark(#086B44,#5FD3A0);--mark:light-dark(#0A8F5A,#10DD8C);
+ --grad:linear-gradient(135deg,#3BEFA6 0%,#10DD8C 45%,#0A9E62 100%);--gradfg:#06130D;
+ --glow:light-dark(rgba(16,221,140,.20),rgba(16,221,140,.16));
+}
+.nilo,.nilo-t{--grad:linear-gradient(135deg,#2BB3E8 0%,#1A6DB3 55%,#134F84 100%);--gradfg:#FFFFFF;--glow:light-dark(rgba(43,179,232,.28),rgba(43,179,232,.18))}
+body.home .h .btn,.h .btn:not(.btn-o){background:var(--act);color:var(--actfg)}
+.don-c .btn{color:var(--gradfg)}
+/* Menu « Nos produits » */
+.dd{position:relative}
+.dd summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:var(--mut)}
+.dd summary::-webkit-details-marker{display:none}
+.dd summary::after{content:"";width:6px;height:6px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:rotate(45deg);margin-top:-3px;transition:transform .2s}
+.dd[open] summary::after{transform:rotate(-135deg);margin-top:3px}
+.dd summary:hover,.dd[open] summary{color:var(--fg)}
+.dd-m{position:absolute;right:0;top:calc(100% + 12px);z-index:30;min-width:260px;padding:8px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-card);box-shadow:var(--sh-soft)}
+.dd-m a{display:flex;align-items:center;gap:12px;padding:10px;border-radius:8px;color:var(--fg)}
+.dd-m a:hover{background:var(--bg2);text-decoration:none}
+.dd-m img{width:32px;height:32px}
+.dd-m strong{display:block;font-size:15px}.dd-m em{font-style:normal;font-size:13px;color:var(--mut)}
+@media (max-width:640px){.dd-m{left:0;right:auto}}
+/* Bourse (dons) dans l'en-tête */
+.tools a.don-i{width:34px;justify-content:center;padding:0}
+.tools a.don-i::before{content:"";width:17px;height:17px;background:currentColor;
+ -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 3h6l-1.5 3h-3z'/%3E%3Cpath d='M10.5 6C6 8 4 12 4 15.5 4 19 7 21 12 21s8-2 8-5.5C20 12 18 8 13.5 6'/%3E%3Cpath d='M12 10.5v6M14 11.5h-2.8a1.4 1.4 0 0 0 0 2.8h1.6a1.4 1.4 0 0 1 0 2.8H10'/%3E%3C/svg%3E") center/contain no-repeat;
+ mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 3h6l-1.5 3h-3z'/%3E%3Cpath d='M10.5 6C6 8 4 12 4 15.5 4 19 7 21 12 21s8-2 8-5.5C20 12 18 8 13.5 6'/%3E%3Cpath d='M12 10.5v6M14 11.5h-2.8a1.4 1.4 0 0 0 0 2.8h1.6a1.4 1.4 0 0 1 0 2.8H10'/%3E%3C/svg%3E") center/contain no-repeat}
+/* Accueil studio */
+.hx{padding-bottom:clamp(32px,5vw,56px)}
+.hx .hh-r .lead{font-size:clamp(19px,2vw,22px)}
+.ms,.vals,.prods{padding:clamp(48px,7vw,88px) var(--pad)}
+.ms{display:grid;grid-template-columns:minmax(0,1fr);gap:16px 48px;border-top:1px solid var(--line)}
+@media (min-width:820px){.ms{grid-template-columns:5fr 7fr}}
+.ms-t p{margin:0 0 14px;font-size:18px;max-width:58ch}
+.ms-t p:first-child{color:var(--fg);font-size:21px;font-weight:500;line-height:1.45}
+.ms-t p+p{color:var(--mut)}
+.vals{background:var(--bg2)}
+.vals h2{margin-bottom:28px}
+.vals-g{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (min-width:760px){.vals-g{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.vals-g li{background:var(--bg);border:1px solid var(--line);border-radius:calc(var(--r-card) + 4px);padding:24px}
+.v-dm{display:block;width:12px;height:12px;transform:rotate(45deg);background:var(--grad);margin:4px 0 16px 2px}
+.vals-g h3{font-size:19px;margin-bottom:6px}
+.vals-g p{margin:0;color:var(--mut)}
+.prods h2{margin-bottom:24px}
+.prods-t{overflow:hidden}
+.prods-r{list-style:none;margin:0;padding:0;display:flex;gap:16px}
+.prod{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:220px;aspect-ratio:1;border:1px solid var(--line);border-radius:calc(var(--r-card) + 4px);background:var(--bg);transition:transform .2s,box-shadow .2s}
+.prod:hover{text-decoration:none;transform:translateY(-3px);box-shadow:var(--sh-soft)}
+.prod img{width:96px;height:96px;margin-bottom:8px}
+.prod strong{font-size:18px}.prod em{font-style:normal;font-size:14px;color:var(--mut)}
+/* défilement automatique dès qu'il y a plusieurs produits (liste dupliquée par le script) */
+.prods-t.run .prods-r{width:max-content;animation:mq 30s linear infinite}
+.prods-t.run:hover .prods-r{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.prods-t.run .prods-r{animation:none}}
+/* Page de dons : onglets */
+.don h2{font-size:24px;margin-bottom:8px}
+.don .tabs button[aria-selected="true"]{border-bottom-color:var(--mark)}
+.dpan{padding:8px 0 4px}
+.dpan>p{margin:0 0 6px;max-width:60ch}
+.dpan .ctas{margin-top:18px}
+.addr{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px}
+.addr code{flex:1;min-width:0;overflow-wrap:anywhere;font:14px "IBM Plex Mono",monospace;padding:12px 14px;background:var(--bg2);border:1px solid var(--line);border-radius:8px}
+.don>.meta{margin-top:40px}
+.qr{flex:none;width:132px;height:132px;display:grid;place-items:center;text-align:center;font-size:12px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
