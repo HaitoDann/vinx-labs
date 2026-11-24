@@ -451,3 +451,12 @@ body.home .h .btn,.h .btn:not(.btn-o){background:var(--act);color:var(--actfg)}
 .addr code{flex:1;min-width:0;overflow-wrap:anywhere;font:14px "IBM Plex Mono",monospace;padding:12px 14px;background:var(--bg2);border:1px solid var(--line);border-radius:8px}
 .don>.meta{margin-top:40px}
 .qr{flex:none;width:132px;height:132px;display:grid;place-items:center;text-align:center;font-size:12px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+
+/* VinX OS : bande « Le système » au vert VinX, sur le modèle de la bande bleue de Nilo */
+.nb.nbv{--nbm:#7DF5C4;color:#E8ECEA;background:radial-gradient(80% 60% at 100% 0%,rgba(16,221,140,.30),transparent 60%),linear-gradient(160deg,#0B2A1E,#06130D)}
+.nb.nbv .nb-in{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.10)}
+.nb.nbv .tabs button[aria-selected="true"]{border-bottom-color:#10DD8C}
+.nb.nbv .pan-n,.nb.nbv .pan-t li,.nb-s{color:#B9C7C0}
+.nb-s{margin:10px 0 0}
+.vx .hp-t::before,.vx .plan.x::before{background:#10DD8C}
+.vx .obj-i{border-radius:var(--r-card);box-shadow:var(--sh-soft)}
