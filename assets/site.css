@@ -228,7 +228,7 @@ section{position:relative}
 .pcard img{width:48px;height:48px;flex:none}
 .pcard strong{display:block;font-size:19px}
 .pcard em{font-style:normal;font-size:14px;color:var(--mut)}
-.pcard-go{margin-left:auto;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#fff;font-weight:700;transition:transform .2s}
+.pcard-go{margin-left:auto;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:var(--gradfg);font-weight:700;transition:transform .2s}
 .pcard:hover .pcard-go{transform:translateX(4px)}
 .home .hp{padding-top:clamp(24px,4vw,40px)}
 /* 5. Tarif */
@@ -383,3 +383,73 @@ main:has(>.prose){overflow-x:clip}
 .don-t{font-size:22px;margin:48px 0 12px}
 .don-l{margin:0 0 24px;padding-left:20px;max-width:65ch}
 .don-l li{margin:6px 0}
+
+/* ── Thème VinX Labs : vert du logo pour les pages générales, bleu réservé à Nilo ── */
+:root{
+ --act:light-dark(#0A8F5A,#10DD8C);--actfg:light-dark(#FFFFFF,#06130D);
+ --lnk:light-dark(#086B44,#5FD3A0);--mark:light-dark(#0A8F5A,#10DD8C);
+ --grad:linear-gradient(135deg,#3BEFA6 0%,#10DD8C 45%,#0A9E62 100%);--gradfg:#06130D;
+ --glow:light-dark(rgba(16,221,140,.20),rgba(16,221,140,.16));
+}
+.nilo,.nilo-t{--grad:linear-gradient(135deg,#2BB3E8 0%,#1A6DB3 55%,#134F84 100%);--gradfg:#FFFFFF;--glow:light-dark(rgba(43,179,232,.28),rgba(43,179,232,.18))}
+body.home .h .btn,.h .btn:not(.btn-o){background:var(--act);color:var(--actfg)}
+.don-c .btn{color:var(--gradfg)}
+/* Menu « Nos produits » */
+.dd{position:relative}
+.dd summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:var(--mut)}
+.dd summary::-webkit-details-marker{display:none}
+.dd summary::after{content:"";width:6px;height:6px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:rotate(45deg);margin-top:-3px;transition:transform .2s}
+.dd[open] summary::after{transform:rotate(-135deg);margin-top:3px}
+.dd summary:hover,.dd[open] summary{color:var(--fg)}
+.dd-m{position:absolute;right:0;top:calc(100% + 12px);z-index:30;min-width:260px;padding:8px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-card);box-shadow:var(--sh-soft)}
+.dd-m a{display:flex;align-items:center;gap:12px;padding:10px;border-radius:8px;color:var(--fg)}
+.dd-m a:hover{background:var(--bg2);text-decoration:none}
+.dd-m img{width:32px;height:32px}
+.dd-m strong{display:block;font-size:15px}.dd-m em{font-style:normal;font-size:13px;color:var(--mut)}
+@media (max-width:640px){.dd-m{left:0;right:auto}}
+/* Bourse (dons) dans l'en-tête */
+.tools a.don-i{width:34px;justify-content:center;padding:0}
+.tools a.don-i::before{content:"";width:17px;height:17px;background:currentColor;
+ -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 3h6l-1.5 3h-3z'/%3E%3Cpath d='M10.5 6C6 8 4 12 4 15.5 4 19 7 21 12 21s8-2 8-5.5C20 12 18 8 13.5 6'/%3E%3Cpath d='M12 10.5v6M14 11.5h-2.8a1.4 1.4 0 0 0 0 2.8h1.6a1.4 1.4 0 0 1 0 2.8H10'/%3E%3C/svg%3E") center/contain no-repeat;
+ mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 3h6l-1.5 3h-3z'/%3E%3Cpath d='M10.5 6C6 8 4 12 4 15.5 4 19 7 21 12 21s8-2 8-5.5C20 12 18 8 13.5 6'/%3E%3Cpath d='M12 10.5v6M14 11.5h-2.8a1.4 1.4 0 0 0 0 2.8h1.6a1.4 1.4 0 0 1 0 2.8H10'/%3E%3C/svg%3E") center/contain no-repeat}
+/* Accueil studio */
+.hx{padding-bottom:clamp(32px,5vw,56px)}
+.hx .hh-r .lead{font-size:clamp(19px,2vw,22px)}
+.ms,.vals,.prods{padding:clamp(48px,7vw,88px) var(--pad)}
+.ms{display:grid;grid-template-columns:minmax(0,1fr);gap:16px 48px;border-top:1px solid var(--line)}
+@media (min-width:820px){.ms{grid-template-columns:5fr 7fr}}
+.ms-t p{margin:0 0 14px;font-size:18px;max-width:58ch}
+.ms-t p:first-child{color:var(--fg);font-size:21px;font-weight:500;line-height:1.45}
+.ms-t p+p{color:var(--mut)}
+.vals{background:var(--bg2)}
+.vals h2{margin-bottom:28px}
+.vals-g{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (min-width:760px){.vals-g{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.vals-g li{background:var(--bg);border:1px solid var(--line);border-radius:calc(var(--r-card) + 4px);padding:24px}
+.v-dm{display:block;width:12px;height:12px;transform:rotate(45deg);background:var(--grad);margin:4px 0 16px 2px}
+.vals-g h3{font-size:19px;margin-bottom:6px}
+.vals-g p{margin:0;color:var(--mut)}
+.refuse{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
+.refuse ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.refuse li{padding:6px 12px;border:1px solid var(--line);border-radius:99px;background:var(--bg);font-size:14px;text-decoration:line-through;text-decoration-color:var(--mark);text-decoration-thickness:1.5px}
+.prods h2{margin-bottom:24px}
+.prods-t{overflow:hidden}
+.prods-r{list-style:none;margin:0;padding:0;display:flex;gap:16px}
+.prod{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:220px;aspect-ratio:1;border:1px solid var(--line);border-radius:calc(var(--r-card) + 4px);background:var(--bg);transition:transform .2s,box-shadow .2s}
+.prod:hover{text-decoration:none;transform:translateY(-3px);box-shadow:var(--sh-soft)}
+.prod img{width:96px;height:96px;margin-bottom:8px}
+.prod strong{font-size:18px}.prod em{font-style:normal;font-size:14px;color:var(--mut)}
+/* défilement automatique dès qu'il y a plusieurs produits (liste dupliquée par le script) */
+.prods-t.run .prods-r{width:max-content;animation:mq 30s linear infinite}
+.prods-t.run:hover .prods-r{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.prods-t.run .prods-r{animation:none}}
+/* Page de dons : onglets */
+.don h2{font-size:24px;margin-bottom:8px}
+.don .tabs button[aria-selected="true"]{border-bottom-color:var(--mark)}
+.dpan{padding:8px 0 4px}
+.dpan>p{margin:0 0 6px;max-width:60ch}
+.dpan .ctas{margin-top:18px}
+.addr{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px}
+.addr code{flex:1;min-width:0;overflow-wrap:anywhere;font:14px "IBM Plex Mono",monospace;padding:12px 14px;background:var(--bg2);border:1px solid var(--line);border-radius:8px}
+.don>.meta{margin-top:40px}
