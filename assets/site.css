@@ -188,3 +188,50 @@ section{position:relative}
 .shot picture,.crop picture{display:block}
 .prose code{font:14px "IBM Plex Mono",monospace;background:var(--bg2);padding:1px 5px}
 [hidden]{display:none!important}
+
+/* ── Refonte visuelle : profondeur, couleur, fonctionnalités ── */
+:root{
+ --grad:linear-gradient(135deg,#2BB3E8 0%,#1A6DB3 55%,#134F84 100%);
+ --glow:light-dark(rgba(43,179,232,.28),rgba(43,179,232,.18));
+ --sh-soft:0 1px 2px light-dark(rgba(6,19,13,.06),rgba(0,0,0,.3)),0 24px 60px -24px light-dark(rgba(6,19,13,.35),rgba(0,0,0,.7));
+ --r:10px;
+}
+/* 2. Captures : coins arrondis, ombre douce, halo */
+.win,.scene{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-soft)}
+.win-bar{font:500 11px "IBM Plex Sans",sans-serif;letter-spacing:.01em;text-align:center;position:relative;padding:7px 56px}
+.win-bar::before{content:"";position:absolute;left:12px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--line);box-shadow:13px 0 var(--line),26px 0 var(--line)}
+.ov .shot{border-radius:8px;overflow:hidden;box-shadow:var(--sh-soft)}
+.crop{border-radius:8px;overflow:hidden;box-shadow:var(--sh-soft)}
+.hp-s{position:relative;border-radius:16px;overflow:hidden;isolation:isolate;
+ background:radial-gradient(60% 70% at 30% 35%,var(--glow),transparent 70%),radial-gradient(50% 60% at 85% 90%,light-dark(rgba(26,109,179,.16),rgba(26,109,179,.22)),transparent 70%),var(--bg2)}
+.hp-s::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
+ background-image:radial-gradient(light-dark(rgba(6,19,13,.12),rgba(255,255,255,.08)) 1px,transparent 1px);background-size:18px 18px;
+ -webkit-mask:linear-gradient(#000,transparent 80%);mask:linear-gradient(#000,transparent 80%)}
+.hero-scene{position:relative}
+.hero-scene::before{content:"";position:absolute;inset:8% 10% -4%;z-index:-1;background:radial-gradient(closest-side,var(--glow),transparent);filter:blur(30px)}
+.ph{position:relative;isolation:isolate}
+/* 3. Couleur : le dégradé du logo Nilo */
+.nilo .btn:not(.btn-o),.nilo-t .btn:not(.btn-o),.btn-b{background:var(--grad);color:#fff;border-radius:6px;box-shadow:0 6px 18px -6px rgba(26,109,179,.6);transition:transform .15s,box-shadow .15s}
+.nilo .btn:not(.btn-o):hover,.nilo-t .btn:not(.btn-o):hover,.btn-b:hover{transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(26,109,179,.7);filter:none}
+.btn-o{border-radius:6px}
+.hp-t{border-left:0;padding-left:26px}
+.hp-t::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:4px;background:var(--grad)}
+.nb{background:radial-gradient(80% 60% at 100% 0%,rgba(43,179,232,.45),transparent 60%),linear-gradient(160deg,#1A6DB3,#0F3F6B);color:#fff}
+.nb-in{background:rgba(6,19,13,.22);border:1px solid rgba(255,255,255,.14);border-top:1px solid rgba(255,255,255,.14);border-radius:16px;backdrop-filter:blur(6px)}
+.nb .tabs button{border-radius:6px 6px 0 0}
+.nb .tabs button[aria-selected="true"]{border-bottom-color:#7FD3F5}
+.plan.x{border-top:0;position:relative;background:radial-gradient(80% 80% at 100% 0%,var(--glow),transparent 70%),var(--bg2)}
+.plan.x::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--grad)}
+.obj-i{border-radius:22px;box-shadow:var(--sh-soft);background:radial-gradient(closest-side,var(--glow),transparent),var(--bg2)}
+/* 4. Fonctionnalités : grille de cartes */
+.args{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;max-width:none;border-top:0;counter-reset:a}
+@media (min-width:640px){.args{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:980px){.args{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.args>div{position:relative;padding:26px 24px 24px;border:1px solid var(--line);border-radius:14px;background:var(--bg);box-shadow:0 1px 2px light-dark(rgba(6,19,13,.04),rgba(0,0,0,.2));transition:transform .2s,box-shadow .2s,border-color .2s;counter-increment:a}
+.args>div:hover{transform:translateY(-3px);border-color:light-dark(#A9CBE9,#2E5A82);box-shadow:var(--sh-soft)}
+.args dt{flex-direction:column;align-items:flex-start;gap:14px;font-size:19px;line-height:1.25}
+.args dt .dm{width:40px;height:40px;margin:0;transform:none;border-radius:10px;background:var(--grad);box-shadow:0 6px 16px -6px rgba(26,109,179,.6);display:grid;place-items:center}
+.args dt .dm::after{content:counter(a,decimal-leading-zero);font:600 13px "IBM Plex Mono",monospace;color:#fff}
+.args dd{margin:8px 0 0;font-size:15px}
+.sec:has(.args){background:linear-gradient(var(--bg),var(--bg2))}
+@media (prefers-reduced-motion:reduce){.args>div,.btn{transition:none}}
