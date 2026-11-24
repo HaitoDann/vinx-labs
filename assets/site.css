@@ -268,3 +268,61 @@ section{position:relative}
 /* Retours de revue : boutons d'origine dans l'en-tête et pour l'achat */
 .h .btn:not(.btn-o),.plan.x .btn:not(.btn-o){background:var(--act);color:var(--actfg);border-radius:2px;box-shadow:none;transform:none}
 .h .btn:not(.btn-o):hover,.plan.x .btn:not(.btn-o):hover{filter:brightness(1.08);box-shadow:none;transform:none}
+
+/* ── Lot 3 ── */
+/* 1. Cohérence : deux rayons, une famille d'ombres, motifs limités */
+:root{--r-btn:6px;--r-card:12px}
+.btn,.h .btn:not(.btn-o),.plan.x .btn:not(.btn-o),.btn-o{border-radius:var(--r-btn)}
+.win,.scene,.crop,.ov .shot{border-radius:var(--r-card)}
+.plan,.pcard,.nb-in,.hp-s{border-radius:calc(var(--r-card) + 4px)}
+.obj-i{border-radius:var(--r-card);box-shadow:var(--sh-soft)}
+.corner{display:none}
+.nb .corner{display:block}
+/* 2. De près : trois cartes égales */
+.crops{gap:20px}
+@media (min-width:820px){.crops{align-items:stretch}}
+.crops figure{display:grid;grid-template-rows:170px auto;background:var(--bg);border:1px solid var(--line);border-radius:calc(var(--r-card) + 4px);overflow:hidden}
+.crops figure>.crop{align-self:center;justify-self:center;width:calc(100% - 40px);margin:0;box-shadow:var(--sh-soft)}
+.crops figure::before{content:"";grid-area:1/1;background:radial-gradient(70% 90% at 50% 40%,var(--glow),transparent 70%),var(--bg2);border-bottom:1px solid var(--line)}
+.crops figure>.crop{grid-area:1/1;z-index:1}
+.crops figcaption{margin:0;padding:16px 18px 20px}
+.cn{border-radius:50%;background:var(--grad);color:#fff}
+/* 3. Hero de la page Nilo */
+.ph::before{content:"";position:absolute;inset:0 0 30%;z-index:-1;
+ background:radial-gradient(40% 55% at 80% 15%,var(--glow),transparent 70%),radial-gradient(light-dark(rgba(6,19,13,.10),rgba(255,255,255,.07)) 1px,transparent 1px);
+ background-size:auto,22px 22px;-webkit-mask:linear-gradient(#000 30%,transparent);mask:linear-gradient(#000 30%,transparent)}
+@media (min-width:820px) and (prefers-reduced-motion:no-preference){
+ .hero-scene{perspective:1800px}
+ .hero-scene>*{transform:rotateX(5deg);transform-origin:50% 0;transition:transform .6s ease}
+ .hero-scene:hover>*{transform:none}}
+/* 4. Typographie */
+.meta,.amt-n{font:400 13px/1.5 "IBM Plex Sans",sans-serif;letter-spacing:.01em}
+.eyebrow{margin:0 0 8px;font:600 13px "IBM Plex Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.detail .sep{display:none}
+/* 5. Mobile */
+@media (max-width:640px){
+ .h{gap:8px 12px;padding-block:10px}
+ .h nav{order:3;width:100%;margin-left:0;gap:16px;overflow-x:auto}
+ .tools{margin-left:auto}
+ .brand .lg-vx,.brand img{height:26px}
+ .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+ .tabs button{white-space:nowrap}
+ .pcard{padding:12px 14px}
+ .plan{padding:22px}
+ .hh h1{font-size:clamp(32px,9vw,44px)}
+}
+/* 6. Pages secondaires */
+.prose{position:relative;isolation:isolate}
+main:has(>.prose){overflow-x:clip}
+.prose::before{content:"";position:absolute;left:0;width:100vw;top:0;height:300px;z-index:-1;
+ background:radial-gradient(40% 70% at 85% 0%,var(--glow),transparent 70%),radial-gradient(light-dark(rgba(6,19,13,.10),rgba(255,255,255,.07)) 1px,transparent 1px);
+ background-size:auto,22px 22px;-webkit-mask:linear-gradient(#000,transparent);mask:linear-gradient(#000,transparent)}
+.prose h2{border-top:0;padding-top:0;margin-top:44px;display:flex;align-items:center;gap:12px}
+.prose h2::before{content:"";flex:none;width:8px;height:8px;transform:rotate(45deg);background:var(--grad)}
+.center-page{display:flex;flex-direction:column;justify-content:center}
+.code-404{font:700 clamp(64px,12vw,120px)/1 "IBM Plex Sans",sans-serif;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.04em}
+/* 7. Mode sombre plus riche */
+:root{--glow:light-dark(rgba(43,179,232,.28),rgba(43,179,232,.30))}
+:root[data-theme="dark"] .nb,.nb{background:radial-gradient(80% 60% at 100% 0%,light-dark(rgba(43,179,232,.45),rgba(43,179,232,.35)),transparent 60%),linear-gradient(160deg,light-dark(#1A6DB3,#16507F),light-dark(#0F3F6B,#0B2238))}
+.plan.x{border-color:light-dark(#1A6DB3,#3E86C6);box-shadow:var(--sh-soft),0 0 0 1px light-dark(transparent,rgba(62,134,198,.25)),0 30px 80px -40px light-dark(transparent,rgba(43,179,232,.45))}
+.win,.crop{border-color:light-dark(var(--line),#3A4246)}
