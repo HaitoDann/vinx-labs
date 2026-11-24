@@ -429,9 +429,6 @@ body.home .h .btn,.h .btn:not(.btn-o){background:var(--act);color:var(--actfg)}
 .v-dm{display:block;width:12px;height:12px;transform:rotate(45deg);background:var(--grad);margin:4px 0 16px 2px}
 .vals-g h3{font-size:19px;margin-bottom:6px}
 .vals-g p{margin:0;color:var(--mut)}
-.refuse{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
-.refuse ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.refuse li{padding:6px 12px;border:1px solid var(--line);border-radius:99px;background:var(--bg);font-size:14px;text-decoration:line-through;text-decoration-color:var(--mark);text-decoration-thickness:1.5px}
 .prods h2{margin-bottom:24px}
 .prods-t{overflow:hidden}
 .prods-r{list-style:none;margin:0;padding:0;display:flex;gap:16px}
@@ -453,3 +450,4 @@ body.home .h .btn,.h .btn:not(.btn-o){background:var(--act);color:var(--actfg)}
 .addr{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px}
 .addr code{flex:1;min-width:0;overflow-wrap:anywhere;font:14px "IBM Plex Mono",monospace;padding:12px 14px;background:var(--bg2);border:1px solid var(--line);border-radius:8px}
 .don>.meta{margin-top:40px}
+.qr{flex:none;width:132px;height:132px;display:grid;place-items:center;text-align:center;font-size:12px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
