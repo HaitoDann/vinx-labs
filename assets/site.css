@@ -334,3 +334,26 @@ main:has(>.prose){overflow-x:clip}
 .nc p{margin:0;max-width:48ch}
 .chip{margin-top:10px;font:500 12px "IBM Plex Sans",sans-serif;padding:4px 10px;border-radius:99px;border:1px dashed var(--line);color:var(--mut)}
 @media (max-width:520px){.pcard .st{display:none}}
+
+/* Accueil par catégories : Système d'exploitation / Applications */
+.cats a{flex-direction:column;gap:2px}
+.cats .k{font-weight:500}
+.cats strong{font-size:20px}
+.cats a::after{content:"↓";position:absolute;right:4px;top:50%;translate:0 -50%;color:var(--mut);transition:translate .2s}
+.cats li{position:relative}.cats a{position:relative}
+.cats a:hover{text-decoration:none}.cats a:hover::after{translate:0 -30%;color:var(--fg)}
+.cat{padding-top:clamp(40px,6vw,72px)}
+.cat-h{padding:0 var(--pad);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;border-bottom:0}
+.cat-h h2{font-size:clamp(28px,4vw,44px)}
+.cat-h p{margin:0;color:var(--mut)}
+.cat-os{background:var(--bg2)}
+.cat-os .hp-s{background:light-dark(#E6EBE8,#101315)}
+.cat-os .hp-s::before{display:none}
+.cat-os .hp-t::before{background:#10DD8C}
+.cat-os .btn-g{border-radius:var(--r-btn)}
+.vx-i.big{width:72px;height:72px;border-radius:16px}.vx-i.big .lg-vx{width:46px}
+.hp .tag .st{margin-left:8px;vertical-align:middle}
+.soon-row{margin:0 var(--pad) clamp(48px,7vw,88px);display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px dashed var(--line);border-radius:calc(var(--r-card) + 4px);background:var(--bg2)}
+.soon-row strong{display:block;font-size:18px}
+.soon-row em{font-style:normal;font-size:14px;color:var(--mut)}
+.home .hp{padding-top:clamp(24px,4vw,40px)}
