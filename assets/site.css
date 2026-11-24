@@ -139,10 +139,6 @@ section{position:relative}
 .pan:not([hidden]){animation:fd .25s ease-out}
 @keyframes fd{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.pan{animation:none}}
-.args{margin:0;max-width:860px;border-top:1px solid var(--line)}
-.args>div{padding:22px 0;border-bottom:1px solid var(--line)}
-.args dt{font-weight:700;font-size:clamp(19px,2.4vw,23px);display:flex;align-items:center}
-.args dd{margin:6px 0 0 22px;color:var(--mut);max-width:60ch}
 .detail{background:var(--bg2)}
 .crops{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
 @media (min-width:820px){.crops{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}.vcr{grid-template-columns:repeat(2,minmax(0,1fr))}.vcr .wide{grid-column:1/-1}}
@@ -188,3 +184,87 @@ section{position:relative}
 .shot picture,.crop picture{display:block}
 .prose code{font:14px "IBM Plex Mono",monospace;background:var(--bg2);padding:1px 5px}
 [hidden]{display:none!important}
+
+/* ── Refonte visuelle : profondeur, couleur, fonctionnalités ── */
+:root{
+ --grad:linear-gradient(135deg,#2BB3E8 0%,#1A6DB3 55%,#134F84 100%);
+ --glow:light-dark(rgba(43,179,232,.28),rgba(43,179,232,.18));
+ --sh-soft:0 1px 2px light-dark(rgba(6,19,13,.06),rgba(0,0,0,.3)),0 24px 60px -24px light-dark(rgba(6,19,13,.35),rgba(0,0,0,.7));
+ --r:10px;
+}
+/* 2. Captures : coins arrondis, ombre douce, halo */
+.win,.scene{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-soft)}
+.win-bar{font:500 11px "IBM Plex Sans",sans-serif;letter-spacing:.01em;text-align:center;position:relative;padding:7px 12px}
+.ov .shot{border-radius:8px;overflow:hidden;box-shadow:var(--sh-soft)}
+.crop{border-radius:8px;overflow:hidden;box-shadow:var(--sh-soft)}
+.hp-s{position:relative;border-radius:16px;overflow:hidden;isolation:isolate;
+ background:radial-gradient(60% 70% at 30% 35%,var(--glow),transparent 70%),radial-gradient(50% 60% at 85% 90%,light-dark(rgba(26,109,179,.16),rgba(26,109,179,.22)),transparent 70%),var(--bg2)}
+.hp-s::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
+ background-image:radial-gradient(light-dark(rgba(6,19,13,.12),rgba(255,255,255,.08)) 1px,transparent 1px);background-size:18px 18px;
+ -webkit-mask:linear-gradient(#000,transparent 80%);mask:linear-gradient(#000,transparent 80%)}
+.hero-scene{position:relative}
+.hero-scene::before{content:"";position:absolute;inset:8% 10% -4%;z-index:-1;background:radial-gradient(closest-side,var(--glow),transparent);filter:blur(30px)}
+.ph{position:relative;isolation:isolate}
+/* 3. Couleur : le dégradé du logo Nilo */
+.nilo .btn:not(.btn-o),.nilo-t .btn:not(.btn-o),.btn-b{background:var(--grad);color:#fff;border-radius:6px;box-shadow:0 6px 18px -6px rgba(26,109,179,.6);transition:transform .15s,box-shadow .15s}
+.nilo .btn:not(.btn-o):hover,.nilo-t .btn:not(.btn-o):hover,.btn-b:hover{transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(26,109,179,.7);filter:none}
+.btn-o{border-radius:6px}
+.hp-t{border-left:0;padding-left:26px}
+.hp-t::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:4px;background:var(--grad)}
+.nb{background:radial-gradient(80% 60% at 100% 0%,rgba(43,179,232,.45),transparent 60%),linear-gradient(160deg,#1A6DB3,#0F3F6B);color:#fff}
+.nb-in{background:rgba(6,19,13,.22);border:1px solid rgba(255,255,255,.14);border-top:1px solid rgba(255,255,255,.14);border-radius:16px;backdrop-filter:blur(6px)}
+.nb .tabs button{border-radius:6px 6px 0 0}
+.nb .tabs button[aria-selected="true"]{border-bottom-color:#7FD3F5}
+.plan.x{border-top:0;position:relative;background:radial-gradient(80% 80% at 100% 0%,var(--glow),transparent 70%),var(--bg2)}
+.plan.x::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--grad)}
+@media (prefers-reduced-motion:reduce){.btn,.pcard,.pcard-go{transition:none}}
+
+/* 1. Accueil : hero plus riche */
+.hh{position:relative;isolation:isolate;padding-top:clamp(48px,7vw,88px)}
+.hh::before{content:"";position:absolute;inset:0;z-index:-1;
+ background:radial-gradient(45% 60% at 85% 20%,var(--glow),transparent 70%),radial-gradient(light-dark(rgba(6,19,13,.10),rgba(255,255,255,.07)) 1px,transparent 1px);
+ background-size:auto,22px 22px;-webkit-mask:linear-gradient(#000 40%,transparent);mask:linear-gradient(#000 40%,transparent)}
+.pcard{display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--bg);box-shadow:var(--sh-soft);transition:transform .2s,border-color .2s}
+.pcard:hover{text-decoration:none;transform:translateY(-2px);border-color:light-dark(#A9CBE9,#2E5A82)}
+.pcard img{width:48px;height:48px;flex:none}
+.pcard strong{display:block;font-size:19px}
+.pcard em{font-style:normal;font-size:14px;color:var(--mut)}
+.pcard-go{margin-left:auto;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#fff;font-weight:700;transition:transform .2s}
+.pcard:hover .pcard-go{transform:translateX(4px)}
+.home .hp{padding-top:clamp(24px,4vw,40px)}
+/* 5. Tarif */
+.plans{border:0;gap:16px}
+.plan{border:1px solid var(--line);border-radius:16px}
+.plan.x{border:1.5px solid light-dark(#1A6DB3,#4F8FCB);overflow:hidden;box-shadow:var(--sh-soft)}
+.btn-soft{box-shadow:none;background:var(--bg2);border:1px solid var(--line)}
+.btn-soft:hover{background:var(--bg);border-color:var(--fg)}
+/* 6. Finitions */
+.h{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:saturate(1.6) blur(12px);backdrop-filter:saturate(1.6) blur(12px)}
+.tools a,.tools button{font-family:"IBM Plex Sans",sans-serif;border-color:transparent;border-radius:8px}
+.tools a:hover,.tools button:hover{background:var(--bg2);border-color:transparent}
+.tools button[data-theme-toggle]{font-size:0;width:34px;justify-content:center}
+.tools button[data-theme-toggle]::before{content:"";width:16px;height:16px;background:currentColor;font-size:13px;
+ -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E") center/contain no-repeat;
+ mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E") center/contain no-repeat}
+.tools button[aria-pressed="true"]{border-color:transparent;background:var(--bg2)}
+.lnk{transition:padding .2s}
+.lnk:hover{padding-right:4px}
+.ph,.sec,.detail,.price{padding-block:clamp(40px,6vw,76px)}
+.hp{padding-block:clamp(40px,6vw,72px)}
+@media (prefers-reduced-motion:no-preference){@supports (animation-timeline:view()){
+ .hp,.crops figure,.plan,.pan-shot,.obj{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+}}
+@keyframes rv{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+/* 7. Pied de page */
+.f{background:var(--bg2);border-top:0;position:relative;padding-top:48px}
+.f::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad)}
+.f>div:first-child::before{content:"";display:block;width:44px;aspect-ratio:1572/1130;margin-bottom:12px;background:var(--fg);
+ -webkit-mask:url(/assets/vinx-logo.svg) center/contain no-repeat;mask:url(/assets/vinx-logo.svg) center/contain no-repeat}
+.f a{padding:2px 0;color:var(--mut)}
+.f a:hover{color:var(--fg)}
+.f .k{margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+.f-n{border-top:1px solid var(--line);padding-top:16px;color:var(--mut)}
+
+/* Retours de revue : boutons d'origine dans l'en-tête et pour l'achat */
+.h .btn:not(.btn-o),.plan.x .btn:not(.btn-o){background:var(--act);color:var(--actfg);border-radius:2px;box-shadow:none;transform:none}
+.h .btn:not(.btn-o):hover,.plan.x .btn:not(.btn-o):hover{filter:brightness(1.08);box-shadow:none;transform:none}
