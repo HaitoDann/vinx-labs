@@ -460,3 +460,14 @@ body.home .h .btn,.h .btn:not(.btn-o){background:var(--act);color:var(--actfg)}
 .nb-s{margin:10px 0 0}
 .vx .hp-t::before,.vx .plan.x::before{background:#10DD8C}
 .vx .obj-i{border-radius:var(--r-card);box-shadow:var(--sh-soft)}
+
+/* Accueil : logo VinX en grand, icônes des valeurs */
+.hx{align-items:stretch}
+.hx .hh-l .lead{margin-top:22px;color:var(--fg);font-size:clamp(19px,2vw,22px)}
+.hx-logo{position:relative;display:grid;place-items:center;min-height:300px;border-radius:calc(var(--r-card) + 8px);overflow:hidden;isolation:isolate;
+ background:radial-gradient(60% 60% at 50% 45%,rgba(16,221,140,.22),transparent 70%),linear-gradient(160deg,#0B2A1E,#06130D)}
+.hx-logo::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.6;background-image:radial-gradient(rgba(255,255,255,.10) 1px,transparent 1px);background-size:22px 22px}
+.hx-logo .lg-vx{width:min(58%,300px);color:#10DD8C}
+@media (max-width:819px){.hx-logo{min-height:220px}}
+.v-ic{display:grid;place-items:center;width:44px;height:44px;border-radius:var(--r-card);background:light-dark(#E3F8EE,#123326);color:light-dark(#0A8F5A,#10DD8C);margin-bottom:16px}
+.v-ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
